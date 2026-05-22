@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>WorkIN</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- FONT AWESOME -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- FONTS -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" 
+    rel="stylesheet"
+  >
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+
+      <img 
+        src="assets/img/Logo-WorkIN-Aba-Final.svg" 
+        alt="WorkIN"
+      >
+
+    </div>
+
+    <!-- PESQUISA -->
+    <div class="search-box">
+
+      <input 
+        type="text" 
+        placeholder="Encontre sua Vaga!"
+      >
+
+      <button class="lupa-pesquisa">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+      </button>
+
+    </div>
+
+    <!-- MENU -->
+    <div class="menu-icon">
+
+      <img 
+        src="assets/icons/menu-ham.svg" 
+        alt="Menu"
+      >
+
+    </div>
+
+  </nav>
+
+  <!-- MENU LATERAL -->
+  <div class="menu-lateral hidden">
+
+    <div class="menu-topo">
+
+      <h2>Menu</h2>
+
+      <button 
+        class="fechar-menu"
+        onclick="fecharMenu()"
+      >
+
+        ✕
+
+      </button>
+
+    </div>
+
+    <ul>
+
+      <li onclick="abrirInicio()">
+        🏠 Início
+      </li>
+
+      <li onclick="abrirPaginaVagas()">
+        💼 Vagas
+      </li>
+
+      <li onclick="window.location.href='sobre.html'">
+        📘 Sobre Nós
+      </li>
+
+      <li onclick="window.location.href='login.html'">
+        👤 Perfil
+      </li>
+
+      <li onclick="sairSistema()">
+        🚪 Sair
+      </li>
+
+    </ul>
+
+  </div>
+
+  <!-- MAIN -->
+  <main>
+
+    <main>
+
+      <!-- ======================================================
+           MOTIVAÇÃO
+      ======================================================= -->
+      <section id="telaMotivacao">
+    
+        <div class="banner">
+    
+          <img 
+            src="assets/img/Comeco-Banner-WorkIN.png" 
+            alt="Banner-WorkIN"
+          >
+    
+        </div>
+    
+        <div class="motivacao-texto">
+    
+          <h2 class="motivacao">
+    
+            Nunca desista! Toda oportunidade começa com uma tentativa.
+            Seu próximo emprego pode estar mais perto do que você imagina.
+    
+          </h2>
+    
+        </div>
+    
+      </section>
+    
+      <!-- ======================================================
+           EMPRESA
+      ======================================================= -->
+      <section id="telaEmpresa">
+    
+        <div class="card">
+    
+          <!-- NOME -->
+          <h1>Marchesan S.A.</h1>
+    
+          <!-- LOGO -->
+          <div class="logo-empresa">
+    
+            <img 
+              src="assets/img/marchesan-sf.png" 
+              alt="Marchesan"
+            >
+    
+          </div>
+    
+          <!-- ENDEREÇO -->
+          <p>📍 João Marchesan, 1979 - Jardim Pereira</p>
+    
+          <!-- INFERIOR -->
+          <div class="bottom">
+    
+            <span>👜 +100 vagas abertas</span>
+    
+            <button onclick="abrirVagas()">
+    
+              Detalhes →
+    
+            </button>
+    
+          </div>
+    
+        </div>
+    
+      </section>
+    
+      <!-- ======================================================
+           LISTA DE VAGAS
+      ======================================================= -->
+      <section id="telaVagas" class="hidden">
+    
+        <div class="vaga-container">
+    
+          <!-- VOLTAR -->
+          <div 
+            class="topo-voltar" 
+            onclick="voltarEmpresa()"
+          >
+    
+            ⬅ Sair
+    
+          </div>
+    
+          <!-- VAGA -->
+          <div 
+            class="vaga-item" 
+            onclick="abrirDetalhe(0)"
+          >
+    
+            Inspetor de Qualidade
+    
+            <span>+15</span>
+    
+          </div>
+    
+          <!-- VAGA -->
+          <div 
+            class="vaga-item" 
+            onclick="abrirDetalhe(1)"
+          >
+    
+            Soldador
+    
+            <span>+25</span>
+    
+          </div>
+    
+          <!-- VAGA -->
+          <div 
+            class="vaga-item" 
+            onclick="abrirDetalhe(2)"
+          >
+    
+            Operador de máquinas
+    
+            <span>+10</span>
+    
+          </div>
+    
+          <!-- VAGA -->
+          <div 
+            class="vaga-item" 
+            onclick="abrirDetalhe(3)"
+          >
+    
+            Projetista Hidráulico
+    
+            <span>+20</span>
+    
+          </div>
+    
+          <!-- VAGA -->
+          <div 
+            class="vaga-item" 
+            onclick="abrirDetalhe(4)"
+          >
+    
+            Projetista de Produto
+    
+            <span>+30</span>
+    
+          </div>
+    
+        </div>
+    
+      </section>
+    
+      <!-- ======================================================
+           DETALHE DA VAGA
+      ======================================================= -->
+      <section id="telaDetalhe" class="hidden">
+    
+        <div class="vaga-container">
+    
+          <!-- VOLTAR -->
+          <div 
+            class="topo-voltar" 
+            onclick="voltarLista()"
+          >
+    
+            ⬅ Voltar
+    
+          </div>
+    
+          <!-- TÍTULO -->
+          <h2 id="tituloVaga"></h2>
+    
+          <!-- BOX -->
+          <div class="detalhe-box">
+    
+            <p>
+              <strong>Requisitos:</strong>
+            </p>
+    
+            <!-- REQUISITOS VIA JS -->
+            <ul id="requisitos"></ul>
+    
+            <p>
+              <strong>Horário:</strong>
+              <span id="horario"></span>
+            </p>
+    
+            <p>
+              <strong>Regime:</strong>
+              <span id="regime"></span>
+            </p>
+    
+            <p>
+              <strong>Contato:</strong>
+              <span id="contato"></span>
+            </p>
+    
+          </div>
+    
+        </div>
+    
+      </section>
+    
+    </main>
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h1>
+
+      Work<span>IN</span>
+
+    </h1>
+
+  </footer>
+
+  <!-- JS -->
+  <script src="assets/js/script.js"></script>
+
+</body>
+</html>
