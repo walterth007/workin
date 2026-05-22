@@ -1,93 +1,193 @@
 // =========================================================
+// MOSTRAR LOGIN
+// =========================================================
+function mostrarLogin(){
+
+  document
+    .getElementById("loginBox")
+    .classList.remove("hidden");
+
+  document
+    .getElementById("cadastroBox")
+    .classList.add("hidden");
+
+  document
+    .getElementById("btnLogin")
+    .classList.add("ativo");
+
+  document
+    .getElementById("btnCadastro")
+    .classList.remove("ativo");
+
+}
+
+// =========================================================
 // MOSTRAR CADASTRO
 // =========================================================
 function mostrarCadastro(){
 
-    document
-      .getElementById("cadastroBox")
-      .classList.toggle("hidden");
-  
+  document
+    .getElementById("cadastroBox")
+    .classList.remove("hidden");
+
+  document
+    .getElementById("loginBox")
+    .classList.add("hidden");
+
+  document
+    .getElementById("btnCadastro")
+    .classList.add("ativo");
+
+  document
+    .getElementById("btnLogin")
+    .classList.remove("ativo");
+
+}
+
+// =========================================================
+// LOGIN
+// =========================================================
+function login(){
+
+  const email =
+    document.getElementById("email").value;
+
+  const senha =
+    document.getElementById("senha").value;
+
+  if(email === "" || senha === ""){
+
+    alert("Preencha todos os campos.");
+
+    return;
   }
-  
-  // =========================================================
-  // CADASTRAR
-  // =========================================================
-  function cadastrar(){
-  
-    // PEGA DADOS
-    const nome =
-      document.getElementById("nomeCadastro").value;
-  
-    const email =
-      document.getElementById("emailCadastro").value;
-  
-    const senha =
-      document.getElementById("senhaCadastro").value;
-  
-    // VALIDAÇÃO
-    if(nome === "" || email === "" || senha === ""){
-  
-      alert("Preencha todos os campos.");
-  
-      return;
-    }
-  
-    // USUÁRIO
-    const usuario = {
-  
-      nome,
-      email,
-      senha
-    };
-  
-    // SALVA
-    localStorage.setItem(
-  
-      "usuario",
-  
-      JSON.stringify(usuario)
-    );
-  
-    alert("Conta criada com sucesso!");
-  
+
+  alert("Login realizado com sucesso!");
+
+  window.location.href = "index.html";
+
+}
+
+// =========================================================
+// CADASTRO
+// =========================================================
+function cadastrar(){
+
+  const nome =
+    document.getElementById("nomeCadastro").value;
+
+  const email =
+    document.getElementById("emailCadastro").value;
+
+  const senha =
+    document.getElementById("senhaCadastro").value;
+
+  if(
+    nome === "" ||
+    email === "" ||
+    senha === ""
+  ){
+
+    alert("Preencha todos os campos.");
+
+    return;
   }
-  
-  // =========================================================
-  // LOGIN
-  // =========================================================
-  function login(){
-  
-    // PEGA DADOS
-    const email =
-      document.getElementById("email").value;
-  
-    const senha =
-      document.getElementById("senha").value;
-  
-    // PEGA USUÁRIO
-    const usuario =
-      JSON.parse(localStorage.getItem("usuario"));
-  
-    // VERIFICA
-    if(
-  
-      usuario &&
-      email === usuario.email &&
-      senha === usuario.senha
-  
-    ){
-  
-      alert("Login realizado!");
-  
-      // REDIRECIONA
-      window.location.href = "index.html";
-  
-    }
-  
-    else{
-  
-      alert("Email ou senha inválidos.");
-  
-    }
-  
-  }
+
+  alert("Conta criada com sucesso!");
+
+  mostrarLogin();
+
+}
+
+// =========================================================
+// MENU LATERAL
+// =========================================================
+const menuIcon =
+  document.querySelector(".menu-icon");
+
+const menuLateral =
+  document.querySelector(".menu-lateral");
+
+// =========================================================
+// ABRIR MENU
+// =========================================================
+menuIcon.addEventListener("click", abrirMenu);
+
+function abrirMenu(){
+
+  menuLateral.classList.remove("hidden");
+
+}
+
+// =========================================================
+// FECHAR MENU
+// =========================================================
+function fecharMenu(){
+
+  menuLateral.classList.add("hidden");
+
+}
+
+// =========================================================
+// MOSTRAR LOGIN
+// =========================================================
+function mostrarLogin(){
+
+  document
+    .getElementById("loginBox")
+    .classList.remove("hidden");
+
+  document
+    .getElementById("cadastroBox")
+    .classList.add("hidden");
+
+  document
+    .getElementById("btnLogin")
+    .classList.add("ativo");
+
+  document
+    .getElementById("btnCadastro")
+    .classList.remove("ativo");
+
+}
+
+// =========================================================
+// MOSTRAR CADASTRO
+// =========================================================
+function mostrarCadastro(){
+
+  document
+    .getElementById("cadastroBox")
+    .classList.remove("hidden");
+
+  document
+    .getElementById("loginBox")
+    .classList.add("hidden");
+
+  document
+    .getElementById("btnCadastro")
+    .classList.add("ativo");
+
+  document
+    .getElementById("btnLogin")
+    .classList.remove("ativo");
+
+}
+
+// =========================================================
+// LOGIN
+// =========================================================
+function login(){
+
+  alert("Login realizado!");
+
+}
+
+// =========================================================
+// CADASTRO
+// =========================================================
+function cadastrar(){
+
+  alert("Cadastro realizado!");
+
+}

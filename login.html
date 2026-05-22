@@ -25,102 +25,181 @@
 
 <body>
 
-  <!-- ======================================================
-       CONTAINER LOGIN
-  ======================================================= -->
-  <div class="login-container">
+<!-- ======================================================
+     NAVBAR
+======================================================= -->
+<nav class="navbar">
 
-    <!-- LOGO -->
-    <img 
-      src="assets/img/Logo-WorkIN-Aba-Final.svg" 
-      alt="WorkIN"
-      class="logo"
-    >
+  <!-- LOGO -->
+  <div class="logo">
 
-    <!-- TÍTULO -->
-    <h1>Entrar</h1>
+    <a href="index.html">
 
-    <!-- FORM -->
-    <div class="form-box">
-
-      <!-- EMAIL -->
-      <input 
-        type="email"
-        id="email"
-        placeholder="Digite seu email"
+      <img 
+        src="assets/img/Logo-WorkIN-Aba-Final.svg"
+        alt="WorkIN"
       >
 
-      <!-- SENHA -->
-      <input 
-        type="password"
-        id="senha"
-        placeholder="Digite sua senha"
-      >
-
-      <!-- BOTÃO LOGIN -->
-      <button onclick="login()">
-
-        Entrar
-
-      </button>
-
-      <!-- CADASTRO -->
-      <p>
-
-        Não possui conta?
-
-        <span onclick="mostrarCadastro()">
-
-          Criar Conta
-
-        </span>
-
-      </p>
-
-    </div>
-
-    <!-- ======================================================
-         CADASTRO
-    ======================================================= -->
-    <div 
-      class="form-box hidden"
-      id="cadastroBox"
-    >
-
-      <h2>Criar Conta</h2>
-
-      <!-- NOME -->
-      <input 
-        type="text"
-        id="nomeCadastro"
-        placeholder="Seu nome"
-      >
-
-      <!-- EMAIL -->
-      <input 
-        type="email"
-        id="emailCadastro"
-        placeholder="Seu email"
-      >
-
-      <!-- SENHA -->
-      <input 
-        type="password"
-        id="senhaCadastro"
-        placeholder="Sua senha"
-      >
-
-      <!-- BOTÃO -->
-      <button onclick="cadastrar()">
-
-        Cadastrar
-
-      </button>
-
-    </div>
+    </a>
 
   </div>
 
+  <!-- MENU HAMBÚRGUER -->
+  <div class="menu-icon">
+
+    <img 
+      src="assets/icons/menu-ham.svg" 
+      alt="Menu"
+    >
+
+  </div>
+
+</nav>
+
+<!-- ======================================================
+     MENU LATERAL
+======================================================= -->
+<div class="menu-lateral hidden">
+
+  <!-- TOPO -->
+  <div class="menu-topo">
+
+    <h2>Menu</h2>
+
+    <button 
+      class="fechar-menu"
+      onclick="fecharMenu()"
+    >
+
+      ✕
+
+    </button>
+
+  </div>
+
+  <!-- LINKS -->
+  <ul>
+
+    <li onclick="window.location.href='index.html'">
+
+      🏠 Início
+
+    </li>
+
+    <li onclick="window.location.href='sobre.html'">
+
+      📘 Sobre
+
+    </li>
+
+    <li onclick="window.location.href='login.html'">
+
+      👤 Perfil
+
+    </li>
+
+  </ul>
+
+</div>
+  <!-- ======================================================
+       MAIN
+  ======================================================= -->
+  <main>
+
+    <!-- LOGIN CONTAINER -->
+    <div class="login-container">
+
+      <!-- LOGO -->
+      <img 
+        src="assets/img/Logo-WorkIN-Aba-Final.svg"
+        alt="WorkIN"
+        class="logo-login"
+      >
+
+      <!-- TABS -->
+      <div class="tabs">
+
+        <button 
+          class="tab-btn ativo"
+          onclick="mostrarLogin()"
+          id="btnLogin"
+        >
+
+          Login
+
+        </button>
+
+        <button 
+          class="tab-btn"
+          onclick="mostrarCadastro()"
+          id="btnCadastro"
+        >
+
+          Cadastro
+
+        </button>
+
+      </div>
+
+      <!-- LOGIN -->
+      <div class="form-box" id="loginBox">
+
+        <input 
+          type="email"
+          id="email"
+          placeholder="Digite seu email"
+        >
+
+        <input 
+          type="password"
+          id="senha"
+          placeholder="Digite sua senha"
+        >
+
+        <button onclick="login()">
+
+          Entrar
+
+        </button>
+
+      </div>
+
+      <!-- CADASTRO -->
+      <div class="form-box hidden" id="cadastroBox">
+
+        <input 
+          type="text"
+          id="nomeCadastro"
+          placeholder="Seu nome"
+        >
+
+        <input 
+          type="email"
+          id="emailCadastro"
+          placeholder="Seu email"
+        >
+
+        <input 
+          type="password"
+          id="senhaCadastro"
+          placeholder="Sua senha"
+        >
+
+        <button onclick="cadastrar()">
+
+          Criar Conta
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
   <footer>
 
     <h1>
