@@ -181,6 +181,8 @@ function login(){
 
   alert("Login realizado!");
 
+  window.location.href = "index.html";
+
 }
 
 // =========================================================
@@ -189,6 +191,10 @@ function login(){
 function cadastrar(){
 
   alert("Cadastro realizado!");
+
+  // REDIRECIONA
+  window.location.href = "index.html";
+
 
 }
 
