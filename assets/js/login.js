@@ -191,3 +191,5 @@ function cadastrar(){
   alert("Cadastro realizado!");
 
 }
+
+
