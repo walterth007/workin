@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+  <!-- ======================================================
+       CONFIGURAÇÕES
+  ======================================================= -->
+  <meta charset="UTF-8">
+
+  <meta 
+    name="viewport" 
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Vagas - WorkIN</title>
+
+  <!-- ======================================================
+       FAVICON
+  ======================================================= -->
+  <link 
+    rel="icon" 
+    type="image/png" 
+    href="assets/img/Logo-WorkIN-Aba-Final.svg"
+  >
+
+  <!-- ======================================================
+       FONTES
+  ======================================================= -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" 
+    rel="stylesheet"
+  >
+
+  <!-- ======================================================
+       FONT AWESOME
+  ======================================================= -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- ======================================================
+       CSS
+  ======================================================= -->
+  <link rel="stylesheet" href="assets/css/vagas.css">
+
+</head>
+
+<body>
+
+  <!-- ======================================================
+       NAVBAR
+  ======================================================= -->
+  <nav class="navbar">
+
+    <!-- LOGO -->
+    <div class="logo">
+
+      <a href="index.html">
+
+        <img 
+          src="assets/img/Logo-WorkIN-Aba-Final.svg"
+          alt="WorkIN"
+        >
+
+      </a>
+
+    </div>
+
+ <!-- PESQUISA -->
+<div class="search-box">
+
+  <input 
+    type="text"
+    id="pesquisa"
+    placeholder="Encontre sua Vaga!"
+    onkeyup="pesquisarVagas()"
+  >
+
+  <button class="lupa-pesquisa">
+
+    <i class="fa-solid fa-magnifying-glass"></i>
+
+  </button>
+
+</div>
+    <!-- MENU -->
+    <div 
+      class="menu-icon"
+      onclick="abrirMenu()"
+    >
+
+      <img 
+        src="assets/icons/menu-ham.svg"
+        alt="Menu"
+      >
+
+    </div>
+
+  </nav>
+
+  <!-- ======================================================
+       MENU LATERAL
+  ======================================================= -->
+  <div class="menu-lateral hidden">
+
+    <div class="menu-topo">
+
+      <h2>Menu</h2>
+
+      <button 
+        class="fechar-menu"
+        onclick="fecharMenu()"
+      >
+
+        ✕
+
+      </button>
+
+    </div>
+
+    <ul>
+
+      <li onclick="window.location.href='index.html'">
+        🏠 Início
+      </li>
+
+      <li onclick="window.location.href='vagas.html'">
+        💼 Vagas
+      </li>
+
+      <li onclick="window.location.href='sobre.html'">
+        📘 Sobre Nós
+      </li>
+
+      <li onclick="window.location.href='login.html'">
+        👤 Perfil
+      </li>
+
+    </ul>
+
+  </div>
+
+  <!-- ======================================================
+       HERO
+  ======================================================= -->
+  <section class="hero-vagas">
+
+    <h1>
+
+      Vagas Disponíveis
+
+    </h1>
+
+    <p>
+
+      Confira as oportunidades cadastradas pelas empresas.
+
+    </p>
+
+  </section>
+
+  <!-- ======================================================
+       CONTAINER VAGAS
+  ======================================================= -->
+  <main class="vagas-container">
+
+    <!-- JS INSERE AQUI -->
+
+  </main>
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+  <footer>
+
+    <h1>
+
+      Work<span>IN</span>
+
+    </h1>
+
+    <p>
+
+      © 2026 WorkIN - Todos os direitos reservados.
+
+    </p>
+
+  </footer>
+
+  <!-- ======================================================
+       JAVASCRIPT
+  ======================================================= -->
+  <script src="assets/js/vagas.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,492 @@
+/* =========================================================
+   RESET
+========================================================= */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+body{
+
+  background: #F7F7F7;
+
+  font-family: 'Inter', sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+.navbar {
+
+  width: 100%;
+
+  background: #3035A1;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding: 20px 40px;
+}
+
+/* =========================================================
+   LOGO
+========================================================= */
+.logo img{
+
+  width: 75px;
+
+  transition: 0.3s ease;
+}
+
+.logo img:hover{
+
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   PESQUISA
+========================================================= */
+.search-box {
+
+  background: rgba(255,255,255,0.12);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  border-radius: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 6px;
+
+  gap: 10px;
+}
+
+.search-box input {
+
+  width: 340px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  padding-left: 18px;
+
+  font-size: 20px;
+}
+
+.search-box input::placeholder {
+
+  color: rgba(255,255,255,0.75);
+}
+
+/* =========================================================
+   BARRA DE PESQUISA
+========================================================= */
+.search-box {
+
+  background: rgba(255,255,255,0.12);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  border-radius: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 6px;
+
+  gap: 10px;
+
+  transition: 0.25s ease;
+}
+
+/* HOVER */
+.search-box:hover{
+
+  background: rgba(255,255,255,0.16);
+
+  transform: translateY(-1px);
+}
+
+/* INPUT */
+.search-box input {
+
+  width: 340px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  padding-left: 18px;
+
+  font-size: 20px;
+
+  font-family: 'Inter', sans-serif;
+}
+
+/* PLACEHOLDER */
+.search-box input::placeholder{
+
+  color: rgba(255,255,255,0.75);
+
+  font-weight: 600;
+}
+
+/* BOTÃO */
+.lupa-pesquisa{
+
+  width: 70px;
+
+  height: 46px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: #C59560;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+/* HOVER */
+.lupa-pesquisa:hover{
+
+  background: #d6a46d;
+
+  transform: scale(1.05);
+}
+
+/* ÍCONE */
+.lupa-pesquisa i{
+
+  font-size: 20px;
+}
+/* =========================================================
+   MENU HAMBURGUER
+========================================================= */
+.menu-icon{
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.menu-icon img{
+
+  width: 34px;
+}
+
+.menu-icon:hover{
+
+  transform: scale(1.08);
+}
+
+/* =========================================================
+   MENU LATERAL
+========================================================= */
+.menu-lateral{
+
+  position: fixed;
+
+  top: 0;
+
+  right: 0;
+
+  width: 320px;
+
+  height: 100vh;
+
+  background: #3035A1;
+
+  padding: 40px 30px;
+
+  z-index: 999;
+
+  box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+}
+
+.menu-topo{
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 50px;
+}
+
+.menu-topo h2{
+
+  color: white;
+
+  font-size: 30px;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.fechar-menu{
+
+  background: transparent;
+
+  border: none;
+
+  color: white;
+
+  font-size: 32px;
+
+  cursor: pointer;
+}
+
+.menu-lateral ul{
+
+  list-style: none;
+}
+
+.menu-lateral li{
+
+  color: white;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  margin-bottom: 30px;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.menu-lateral li:hover{
+
+  transform: translateX(-8px);
+
+  color: #FCC61D;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero-vagas{
+
+  width: 100%;
+
+  padding: 80px 20px;
+
+  background: linear-gradient(
+    135deg,
+    #3035A1,
+    #1d2175
+  );
+
+  text-align: center;
+
+  color: white;
+}
+
+.hero-vagas h1{
+
+  font-size: 58px;
+
+  margin-bottom: 20px;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-vagas p{
+
+  font-size: 22px;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+.vagas-container{
+
+  width: 100%;
+
+  padding: 60px 20px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+.vaga-card{
+
+  width: 360px;
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+
+  transition: 0.2s ease;
+}
+
+.vaga-card:hover{
+
+  transform: translateY(-8px);
+}
+
+.vaga-card h2{
+
+  color: #3035A1;
+
+  font-size: 32px;
+
+  margin-bottom: 15px;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+.empresa{
+
+  display: inline-block;
+
+  background: #FCC61D;
+
+  padding: 8px 18px;
+
+  border-radius: 30px;
+
+  font-weight: 700;
+
+  margin-bottom: 20px;
+}
+
+.vaga-card p{
+
+  font-size: 18px;
+
+  margin-bottom: 25px;
+}
+
+.vaga-card button{
+
+  border: none;
+
+  background: #3035A1;
+
+  color: white;
+
+  padding: 15px 25px;
+
+  border-radius: 30px;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   DETALHES
+========================================================= */
+.detalhe-vaga{
+
+  width: 700px;
+
+  background: white;
+
+  padding: 40px;
+
+  border-radius: 30px;
+
+  box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+}
+
+.btn-voltar{
+
+  border: none;
+
+  background: #3035A1;
+
+  color: white;
+
+  padding: 14px 24px;
+
+  border-radius: 30px;
+
+  margin-bottom: 30px;
+
+  cursor: pointer;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+footer{
+
+  width: 100%;
+
+  background: #3035A1;
+
+  color: white;
+
+  padding: 35px 20px;
+
+  text-align: center;
+}
+
+footer h1{
+
+  font-size: 42px;
+
+  font-family: 'Montserrat', sans-serif;
+}
+
+footer span{
+
+  color: #FCC61D;
+}
+
+/* =========================================================
+   ESCONDER
+========================================================= */
+.hidden{
+
+  display: none !important;
+}
