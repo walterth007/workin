@@ -1,28 +1,21 @@
 /* =========================================================
    RESET GERAL
-   Remove margens e espaçamentos padrões do navegador
 ========================================================= */
-* {
+*{
   margin: 0;
   padding: 0;
-
-  /* Faz padding e border entrarem no tamanho total */
   box-sizing: border-box;
 }
 
 /* =========================================================
    BODY
-   Configurações gerais da página
 ========================================================= */
-body {
+body{
 
-  /* Cor de fundo do site */
   background: #F7F7F7;
 
-  /* Fonte padrão */
   font-family: 'Inter', sans-serif;
 
-  /* Evita rolagem horizontal */
   overflow-x: hidden;
 }
 
@@ -36,7 +29,7 @@ img{
 /* =========================================================
    NAVBAR
 ========================================================= */
-.navbar {
+.navbar{
 
   width: 100%;
 
@@ -50,8 +43,6 @@ img{
 
   padding: 20px 40px;
 
-  color: white;
-
   position: relative;
 }
 
@@ -59,12 +50,16 @@ img{
    LOGO
 ========================================================= */
 .logo{
+
   display: flex;
+
   align-items: center;
 }
 
 .logo a{
+
   display: flex;
+
   align-items: center;
 
   text-decoration: none;
@@ -74,30 +69,130 @@ img{
 
   width: 75px;
 
+  transition: 0.3s ease;
+
   cursor: pointer;
 }
 
-.logo:hover {
-
-  transition: 0.3s ease;
+.logo img:hover{
 
   transform: scale(1.08);
 }
 
 /* =========================================================
-   MENU HAMBÚRGUER
+   PESQUISA
 ========================================================= */
-.menu-icon {
+.search-box{
 
-  font-size: 32px;
+  background: rgba(255,255,255,0.12);
+
+  border: 1px solid rgba(255,255,255,0.2);
+
+  border-radius: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 6px;
+
+  gap: 10px;
+
+  transition: 0.25s ease;
+}
+
+.search-box:hover{
+
+  background: rgba(255,255,255,0.16);
+
+  transform: translateY(-1px);
+}
+
+.search-box input{
+
+  width: 340px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  padding-left: 18px;
+
+  font-size: 20px;
+
+  font-family: 'Inter', sans-serif;
+}
+
+.search-box input::placeholder{
+
+  color: rgba(255,255,255,0.75);
+
+  font-weight: 600;
+}
+
+.search-box input:focus::placeholder{
+
+  opacity: 0;
+}
+
+/* =========================================================
+   BOTÃO LUPA
+========================================================= */
+.lupa-pesquisa{
+
+  width: 70px;
+
+  height: 46px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: #C59560;
+
+  color: white;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 
   cursor: pointer;
 
   transition: 0.2s ease;
 }
 
-.menu-icon img {
+.lupa-pesquisa:hover{
+
+  background: #d6a46d;
+
+  transform: scale(1.05);
+}
+
+.lupa-pesquisa i{
+
+  font-size: 20px;
+}
+
+/* =========================================================
+   MENU HAMBÚRGUER
+========================================================= */
+.menu-icon{
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.menu-icon img{
+
   width: 34px;
+
   height: 34px;
 }
 
@@ -111,48 +206,36 @@ img{
 ========================================================= */
 .menu-lateral{
 
-  /* FIXA O MENU NA TELA */
   position: fixed;
 
-  /* FICA NO TOPO */
   top: 0;
 
-  /* AGORA FICA NA DIREITA */
   right: 0;
 
-  /* LARGURA DO MENU */
   width: 320px;
 
-  /* ALTURA TOTAL DA TELA */
   height: 100vh;
 
-  /* COR DE FUNDO */
   background: #3035A1;
 
-  /* ESPAÇAMENTO INTERNO */
   padding: 40px 30px;
 
-  /* FICA ACIMA DOS OUTROS ELEMENTOS */
   z-index: 999;
 
-  /* SOMBRA */
   box-shadow: -5px 0 15px rgba(0,0,0,0.2);
 
-  /* ANIMAÇÃO */
-  transition: 0.3s ease;
-
-  /* ORGANIZA EM COLUNA */
   display: flex;
 
   flex-direction: column;
+
+  transition: 0.3s ease;
 }
 
 /* =========================================================
-   TOPO DO MENU
+   TOPO MENU
 ========================================================= */
 .menu-topo{
 
-  /* ALINHA ITENS */
   display: flex;
 
   align-items: center;
@@ -162,9 +245,6 @@ img{
   margin-bottom: 50px;
 }
 
-/* =========================================================
-   TÍTULO MENU
-========================================================= */
 .menu-topo h2{
 
   color: white;
@@ -192,7 +272,6 @@ img{
   transition: 0.2s ease;
 }
 
-/* HOVER */
 .fechar-menu:hover{
 
   transform: rotate(90deg);
@@ -208,9 +287,6 @@ img{
   list-style: none;
 }
 
-/* =========================================================
-   ITENS MENU
-========================================================= */
 .menu-lateral li{
 
   color: white;
@@ -226,118 +302,11 @@ img{
   transition: 0.2s ease;
 }
 
-/* HOVER */
 .menu-lateral li:hover{
 
   transform: translateX(-8px);
 
   color: #FCC61D;
-}
-
-/* =========================================================
-   BARRA DE PESQUISA
-========================================================= */
-.search-box {
-
-  background: rgba(255,255,255,0.12);
-
-  border: 1px solid rgba(255,255,255,0.2);
-
-  border-radius: 60px;
-
-  display: flex;
-
-  align-items: center;
-
-  padding: 6px;
-
-  gap: 10px;
-
-  transition: 0.25s ease;
-}
-
-/* Hover */
-.search-box:hover{
-
-  background: rgba(255,255,255,0.16);
-
-  transform: translateY(-1px);
-}
-
-/* Input */
-.search-box input {
-
-  width: 340px;
-
-  border: none;
-
-  outline: none;
-
-  background: transparent;
-
-  color: white;
-
-  padding-left: 18px;
-
-  font-size: 20px;
-
-  font-family: 'Inter', sans-serif;
-}
-
-/* Placeholder */
-.search-box input::placeholder{
-
-  color: rgba(255,255,255,0.75);
-
-  font-weight: 600;
-
-  transition: opacity 0.2s ease;
-}
-
-/* Placeholder ao clicar */
-.search-box input:focus::placeholder{
-
-  opacity: 0;
-}
-
-/* =========================================================
-   BOTÃO LUPA
-========================================================= */
-.lupa-pesquisa{
-
-  width: 70px;
-  height: 46px;
-
-  border: none;
-
-  border-radius: 50px;
-
-  background: #C59560;
-
-  color: white;
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: center;
-
-  cursor: pointer;
-
-  transition: 0.2s ease;
-}
-
-/* Hover */
-.lupa-pesquisa:hover{
-
-  background: #d6a46d;
-
-  transform: scale(1.05);
-}
-
-/* Ícone */
-.lupa-pesquisa i{
-  font-size: 20px;
 }
 
 /* =========================================================
@@ -357,7 +326,7 @@ main{
 /* =========================================================
    MOTIVAÇÃO
 ========================================================= */
-#telaMotivacao {
+#telaMotivacao{
 
   width: 100%;
 
@@ -367,7 +336,7 @@ main{
 /* =========================================================
    BANNER
 ========================================================= */
-.banner {
+.banner{
 
   width: 100%;
 
@@ -375,21 +344,14 @@ main{
 
   justify-content: center;
 
-  align-items: center;
-
   overflow: hidden;
-
-  background: #F7F7F7;
 }
 
-/* Imagem */
 .banner img{
 
   width: 100%;
 
   height: auto;
-
-  display: block;
 
   object-fit: contain;
 }
@@ -398,6 +360,7 @@ main{
    TEXTO MOTIVACIONAL
 ========================================================= */
 .motivacao-texto{
+
   padding: 25px;
 }
 
@@ -415,19 +378,23 @@ main{
 }
 
 /* =========================================================
-   TELAS
+   ÁREA DAS EMPRESAS
 ========================================================= */
-#telaEmpresa,
-#telaVagas,
-#telaDetalhe{
+#telaEmpresa{
 
   width: 100%;
 
-  display: flex;
+  padding: 50px 40px;
 
-  justify-content: center;
+  display: grid;
 
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+
+  gap: 40px;
+
+  justify-items: center;
+
+  align-items: stretch;
 }
 
 /* =========================================================
@@ -435,7 +402,11 @@ main{
 ========================================================= */
 .card{
 
-  width: 560px;
+  width: 100%;
+
+  max-width: 500px;
+
+  min-height: 650px;
 
   padding: 38px;
 
@@ -449,19 +420,40 @@ main{
 
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 
-  margin-bottom: 50px;
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  transition: 0.25s ease;
 }
 
-/* Título */
+.card:hover{
+
+  transform: translateY(-8px);
+}
+
+/* =========================================================
+   TÍTULO EMPRESA
+========================================================= */
 .card h1{
 
   font-family: 'Montserrat', sans-serif;
 
   color: white;
 
-  font-size: 38px;
+  font-size: 34px;
 
   margin-bottom: 28px;
+
+  min-height: 90px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
 /* =========================================================
@@ -471,57 +463,75 @@ main{
 
   background: #ffffff;
 
-  padding: 45px;
+  padding: 40px;
 
   border-radius: 20px;
 
   margin-bottom: 28px;
+
+  height: 260px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
-/* Imagem empresa */
 .logo-empresa img{
-
-  border-radius: 20px;
 
   width: 220px;
 
-  margin: 0 auto;
+  max-height: 160px;
+
+  object-fit: contain;
+
+  border-radius: 20px;
 
   padding: 5px;
-  
-  border: 5px solid black;
 
-  
+  border: 5px solid black;
 }
 
-/* Texto */
+/* =========================================================
+   TEXTO CARD
+========================================================= */
 .card p{
 
   font-size: 20px;
 
   margin-top: 10px;
+
+  min-height: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
 }
 
 /* =========================================================
-   PARTE INFERIOR
+   PARTE INFERIOR CARD
 ========================================================= */
 .bottom{
 
-  margin-top: 30px;
+  margin-top: auto;
 
   display: flex;
 
   align-items: center;
 
   justify-content: space-between;
+
+  gap: 20px;
 }
 
-/* Texto vagas */
 .bottom span{
 
-  font-size: 22px;
+  font-size: 20px;
 
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* =========================================================
@@ -546,16 +556,17 @@ button{
   border-radius: 30px;
 }
 
-/* Hover */
-button:hover {
+button:hover{
 
-  background: #2f2f90;
+  background: #25297e;
+
+  transform: scale(1.03);
 }
 
 /* =========================================================
    CONTAINER VAGAS
 ========================================================= */
-.vaga-container {
+.vaga-container{
 
   width: 560px;
 
@@ -614,13 +625,11 @@ button:hover {
   box-shadow: 0 3px 8px rgba(0,0,0,0.12);
 }
 
-/* Hover */
-.vaga-item:hover {
+.vaga-item:hover{
 
   transform: scale(1.03);
 }
 
-/* Badge */
 .vaga-item span{
 
   background: #F7F7F7;
@@ -666,7 +675,6 @@ button:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-/* Textos */
 .detalhe-box p{
 
   font-size: 22px;
@@ -676,12 +684,11 @@ button:hover {
   margin-bottom: 12px;
 }
 
-/* Strong */
 .detalhe-box strong{
+
   font-size: 24px;
 }
 
-/* Lista */
 .detalhe-box ul{
 
   margin: 18px 0 24px 0;
@@ -689,7 +696,6 @@ button:hover {
   padding-left: 30px;
 }
 
-/* Itens */
 .detalhe-box li{
 
   font-size: 21px;
@@ -698,7 +704,7 @@ button:hover {
 }
 
 /* =========================================================
-   ESCONDER ELEMENTOS
+   ESCONDER
 ========================================================= */
 .hidden{
 
@@ -723,7 +729,6 @@ footer{
   text-align: center;
 }
 
-/* Nome */
 footer h1{
 
   font-family: 'Montserrat', sans-serif;
@@ -733,17 +738,14 @@ footer h1{
   margin-bottom: 10px;
 }
 
-/* Parte colorida */
 footer h1 span{
 
   color: #FCC61D;
 }
 
-/* Direitos */
 footer p{
 
   font-size: 18px;
 
   opacity: 0.9;
 }
-
