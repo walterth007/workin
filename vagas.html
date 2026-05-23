@@ -8,8 +8,8 @@
   ======================================================= -->
   <meta charset="UTF-8">
 
-  <meta 
-    name="viewport" 
+  <meta
+    name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
 
@@ -18,25 +18,25 @@
   <!-- ======================================================
        FAVICON
   ======================================================= -->
-  <link 
-    rel="icon" 
-    type="image/png" 
+  <link
+    rel="icon"
+    type="image/png"
     href="assets/img/Logo-WorkIN-Aba-Final.svg"
   >
 
   <!-- ======================================================
-       FONTES
+       GOOGLE FONTS
   ======================================================= -->
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
     rel="stylesheet"
   >
 
   <!-- ======================================================
        FONT AWESOME
   ======================================================= -->
-  <link 
-    rel="stylesheet" 
+  <link
+    rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
 
@@ -59,7 +59,7 @@
 
       <a href="index.html">
 
-        <img 
+        <img
           src="assets/img/Logo-WorkIN-Aba-Final.svg"
           alt="WorkIN"
         >
@@ -68,30 +68,35 @@
 
     </div>
 
- <!-- PESQUISA -->
-<div class="search-box">
+    <!-- ======================================================
+         PESQUISA
+    ======================================================= -->
+    <div class="search-box">
 
-  <input 
-    type="text"
-    id="pesquisa"
-    placeholder="Encontre sua Vaga!"
-    onkeyup="pesquisarVagas()"
-  >
+      <input
+        type="text"
+        id="pesquisa"
+        placeholder="Encontre sua Vaga!"
+        onkeyup="pesquisarVagas()"
+      >
 
-  <button class="lupa-pesquisa">
+      <button class="lupa-pesquisa">
 
-    <i class="fa-solid fa-magnifying-glass"></i>
+        <i class="fa-solid fa-magnifying-glass"></i>
 
-  </button>
+      </button>
 
-</div>
-    <!-- MENU -->
-    <div 
+    </div>
+
+    <!-- ======================================================
+         MENU HAMBÚRGUER
+    ======================================================= -->
+    <div
       class="menu-icon"
       onclick="abrirMenu()"
     >
 
-      <img 
+      <img
         src="assets/icons/menu-ham.svg"
         alt="Menu"
       >
@@ -105,11 +110,13 @@
   ======================================================= -->
   <div class="menu-lateral hidden">
 
+    <!-- TOPO MENU -->
     <div class="menu-topo">
 
       <h2>Menu</h2>
 
-      <button 
+      <!-- BOTÃO FECHAR -->
+      <button
         class="fechar-menu"
         onclick="fecharMenu()"
       >
@@ -120,6 +127,7 @@
 
     </div>
 
+    <!-- LISTA -->
     <ul>
 
       <li onclick="window.location.href='index.html'">
@@ -138,14 +146,18 @@
         👤 Perfil
       </li>
 
+      <li onclick="sairSistema()">
+        🚪 Sair
+      </li>
+
     </ul>
 
   </div>
 
   <!-- ======================================================
-       HERO
+       TÍTULO
   ======================================================= -->
-  <section class="hero-vagas">
+  <section class="titulo-vagas">
 
     <h1>
 
@@ -166,7 +178,7 @@
   ======================================================= -->
   <main class="vagas-container">
 
-    <!-- JS INSERE AQUI -->
+    <!-- JAVASCRIPT INSERE AS VAGAS -->
 
   </main>
 

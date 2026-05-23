@@ -1,17 +1,24 @@
 // =========================================================
 // MENU
 // =========================================================
+const menuIcon =
+  document.querySelector(".menu-icon");
+
 const menuLateral =
   document.querySelector(".menu-lateral");
 
+// =========================================================
 // ABRIR MENU
+// =========================================================
 function abrirMenu(){
 
   menuLateral.classList.remove("hidden");
 
 }
 
+// =========================================================
 // FECHAR MENU
+// =========================================================
 function fecharMenu(){
 
   menuLateral.classList.add("hidden");
@@ -19,39 +26,299 @@ function fecharMenu(){
 }
 
 // =========================================================
-// VAGAS
+// EVENTO MENU
 // =========================================================
-const vagas = [
+menuIcon.addEventListener("click", abrirMenu);
 
+// =========================================================
+// SAIR
+// =========================================================
+function sairSistema(){
+
+  window.location.href = "login.html";
+
+}
+
+// =========================================================
+// EMPRESAS E VAGAS
+// =========================================================
+const empresas = [
+
+  // =======================================================
+  // MARCHESAN
+  // =======================================================
   {
-    titulo: "Inspetor de Qualidade",
-    empresa: "Marchesan S.A.",
-    local: "Matão - SP",
+    nome: "Marchesan S.A.",
 
-    requisitos: [
-      "Ensino Médio Completo",
-      "Leitura de desenho técnico",
-      "Metrologia"
-    ],
+    vagas: [
 
-    horario: "08h às 18h",
-    regime: "CLT",
-    contato: "(16) 3221-6500"
+      {
+        titulo: "Inspetor de Qualidade",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "Ensino Médio Completo",
+          "Leitura de desenho técnico",
+          "Metrologia"
+        ],
+
+        horario: "08h às 18h",
+
+        regime: "CLT",
+
+        contato: "(16) 3221-6500"
+      },
+
+      {
+        titulo: "Soldador",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "Solda MIG/TIG",
+          "Experiência na área"
+        ],
+
+        horario: "07h às 17h",
+
+        regime: "CLT",
+
+        contato: "(16) 3221-6500"
+      },
+
+      {
+        titulo: "Operador de Máquinas",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "Experiência industrial",
+          "Noções de segurança"
+        ],
+
+        horario: "07h às 16h",
+
+        regime: "CLT",
+
+        contato: "(16) 3221-6500"
+      },
+
+      {
+        titulo: "Projetista Hidráulico",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "AutoCAD",
+          "Projetos hidráulicos"
+        ],
+
+        horario: "08h às 18h",
+
+        regime: "CLT",
+
+        contato: "(16) 3221-6500"
+      },
+
+      {
+        titulo: "Projetista de Produto",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "SolidWorks",
+          "Desenvolvimento de produto"
+        ],
+
+        horario: "08h às 18h",
+
+        regime: "CLT",
+
+        contato: "(16) 3221-6500"
+      }
+
+    ]
   },
 
+  // =======================================================
+  // BALDAN
+  // =======================================================
   {
-    titulo: "Soldador",
-    empresa: "Marchesan S.A.",
-    local: "Matão - SP",
+    nome: "Baldan Implementos",
 
-    requisitos: [
-      "Solda MIG/TIG",
-      "Experiência na área"
-    ],
+    vagas: [
 
-    horario: "07h às 17h",
-    regime: "CLT",
-    contato: "(16) 3221-6500"
+      {
+        titulo: "Auxiliar de Produção",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "Ensino Médio Completo",
+          "Disponibilidade de horário"
+        ],
+
+        horario: "07h às 17h",
+
+        regime: "CLT",
+
+        contato: "(16) 3383-9999"
+      },
+
+      {
+        titulo: "Torneiro Mecânico",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "Curso de Torno",
+          "Experiência na função"
+        ],
+
+        horario: "08h às 18h",
+
+        regime: "CLT",
+
+        contato: "(16) 3383-9999"
+      }
+
+    ]
+  },
+
+  // =======================================================
+  // LBR
+  // =======================================================
+  {
+    nome: "LBR",
+
+    vagas: [
+
+      {
+        titulo: "Analista Administrativo",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "Pacote Office",
+          "Boa comunicação"
+        ],
+
+        horario: "08h às 17h",
+
+        regime: "CLT",
+
+        contato: "(16) 4002-8922"
+      },
+
+      {
+        titulo: "Auxiliar de Limpeza",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "Organização",
+          "Comprometimento"
+        ],
+
+        horario: "06h às 15h",
+
+        regime: "CLT",
+
+        contato: "(16) 4002-8922"
+      }
+
+    ]
+  },
+
+  // =======================================================
+  // CITROSUCO
+  // =======================================================
+  {
+    nome: "Citrosuco",
+
+    vagas: [
+
+      {
+        titulo: "Técnico de Segurança",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "Curso Técnico",
+          "Experiência na área"
+        ],
+
+        horario: "08h às 18h",
+
+        regime: "CLT",
+
+        contato: "(16) 3382-5000"
+      },
+
+      {
+        titulo: "Motorista",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "CNH E",
+          "Experiência com caminhão"
+        ],
+
+        horario: "Turnos",
+
+        regime: "CLT",
+
+        contato: "(16) 3382-5000"
+      }
+
+    ]
+  },
+
+  // =======================================================
+  // LOUIS DREYFUS
+  // =======================================================
+  {
+    nome: "Louis Dreyfus Company",
+
+    vagas: [
+
+      {
+        titulo: "Eletricista Industrial",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "NR10",
+          "Experiência industrial"
+        ],
+
+        horario: "08h às 18h",
+
+        regime: "CLT",
+
+        contato: "(16) 3333-4444"
+      },
+
+      {
+        titulo: "Mecânico Industrial",
+
+        local: "Matão - SP",
+
+        requisitos: [
+          "Mecânica Industrial",
+          "Experiência na função"
+        ],
+
+        horario: "07h às 17h",
+
+        regime: "CLT",
+
+        contato: "(16) 3333-4444"
+      }
+
+    ]
   }
 
 ];
@@ -59,53 +326,77 @@ const vagas = [
 // =========================================================
 // MOSTRAR VAGAS
 // =========================================================
-function mostrarVagas(lista){
+function mostrarVagas(listaEmpresas = empresas){
 
   const container =
     document.querySelector(".vagas-container");
 
   container.innerHTML = "";
 
-  lista.forEach((vaga, index) => {
+  listaEmpresas.forEach((empresa, empresaIndex) => {
 
     container.innerHTML += `
 
-      <div class="vaga-card">
+      <div class="empresa-titulo">
 
-        <h2>${vaga.titulo}</h2>
-
-        <span class="empresa">
-
-          ${vaga.empresa}
-
-        </span>
-
-        <p>
-
-          📍 ${vaga.local}
-
-        </p>
-
-        <button onclick="abrirDetalhes(${index})">
-
-          Ver Detalhes
-
-        </button>
+        ${empresa.nome}
 
       </div>
 
     `;
+
+    empresa.vagas.forEach((vaga, vagaIndex) => {
+
+      container.innerHTML += `
+
+        <div class="vaga-card">
+
+          <h2>
+
+            ${vaga.titulo}
+
+          </h2>
+
+          <span class="empresa">
+
+            ${empresa.nome}
+
+          </span>
+
+          <p>
+
+            📍 ${vaga.local}
+
+          </p>
+
+          <button
+            onclick="abrirDetalhes(${empresaIndex}, ${vagaIndex})"
+          >
+
+            Ver Detalhes
+
+          </button>
+
+        </div>
+
+      `;
+
+    });
 
   });
 
 }
 
 // =========================================================
-// DETALHES
+// ABRIR DETALHES
 // =========================================================
-function abrirDetalhes(index){
+function abrirDetalhes(empresaIndex, vagaIndex){
 
-  const vaga = vagas[index];
+  const empresa =
+    empresas[empresaIndex];
+
+  const vaga =
+    empresa.vagas[vagaIndex];
 
   let requisitosHTML = "";
 
@@ -124,24 +415,32 @@ function abrirDetalhes(index){
 
       <div class="detalhe-vaga">
 
-        <button 
+        <button
           class="btn-voltar"
-          onclick="voltarVagas()"
+          onclick="mostrarVagas()"
         >
 
           ⬅ Voltar
 
         </button>
 
-        <h1>${vaga.titulo}</h1>
+        <h1>
 
-        <span class="empresa">
+          ${vaga.titulo}
 
-          ${vaga.empresa}
+        </h1>
+
+        <span>
+
+          ${empresa.nome}
 
         </span>
 
-        <p>📍 ${vaga.local}</p>
+        <p>
+
+          📍 ${vaga.local}
+
+        </p>
 
         <div class="detalhes-box">
 
@@ -183,16 +482,7 @@ function abrirDetalhes(index){
 }
 
 // =========================================================
-// VOLTAR
-// =========================================================
-function voltarVagas(){
-
-  mostrarVagas(vagas);
-
-}
-
-// =========================================================
-// PESQUISA
+// PESQUISAR
 // =========================================================
 function pesquisarVagas(){
 
@@ -202,19 +492,48 @@ function pesquisarVagas(){
       .value
       .toLowerCase();
 
-  const filtradas = vagas.filter(vaga => {
+  const empresasFiltradas = [];
 
-    return vaga.titulo
-      .toLowerCase()
-      .includes(texto);
+  empresas.forEach(empresa => {
+
+    const vagasFiltradas =
+      empresa.vagas.filter(vaga => {
+
+        return (
+
+          vaga.titulo
+            .toLowerCase()
+            .includes(texto)
+
+          ||
+
+          empresa.nome
+            .toLowerCase()
+            .includes(texto)
+
+        );
+
+      });
+
+    if(vagasFiltradas.length > 0){
+
+      empresasFiltradas.push({
+
+        nome: empresa.nome,
+
+        vagas: vagasFiltradas
+
+      });
+
+    }
 
   });
 
-  mostrarVagas(filtradas);
+  mostrarVagas(empresasFiltradas);
 
 }
 
 // =========================================================
 // INICIAR
 // =========================================================
-mostrarVagas(vagas);
+mostrarVagas();
