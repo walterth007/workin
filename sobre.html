@@ -3,47 +3,50 @@
 
 <head>
 
+  <!-- ======================================================
+       CONFIGURAÇÕES
+  ======================================================= -->
   <meta charset="UTF-8">
 
-  <meta 
-    name="viewport" 
+  <meta
+    name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
 
   <title>Sobre Nós - WorkIN</title>
 
+  <!-- ======================================================
+       FAVICON
+  ======================================================= -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/img/Logo-WorkIN-Aba-Final.svg"
+  >
 
   <!-- ======================================================
-     ÍCONE DA ABA
-======================================================= -->
-<link 
-  rel="icon" 
-  type="image/png" 
-  href="assets/img/Logo-WorkIN-Aba-Final.svg"
-/>
-
-  <!-- GOOGLE FONTS -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link 
-    rel="preconnect" 
-    href="https://fonts.gstatic.com" 
-    crossorigin
-  >
-
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" 
+       CSS
+  ======================================================= -->
+  <link
     rel="stylesheet"
+    href="assets/css/sobre.css"
   >
 
-  <!-- FONT AWESOME -->
-  <link 
-    rel="stylesheet" 
+  <!-- ======================================================
+       FONT AWESOME
+  ======================================================= -->
+  <link
+    rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="assets/css/sobre.css">
+  <!-- ======================================================
+       FONTES
+  ======================================================= -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
 </head>
 
@@ -59,8 +62,8 @@
 
       <a href="index.html">
 
-        <img 
-          src="assets/img/Logo-WorkIN-Aba-Final.svg" 
+        <img
+          src="assets/img/Logo-WorkIN-Aba-Final.svg"
           alt="WorkIN"
         >
 
@@ -71,8 +74,8 @@
     <!-- PESQUISA -->
     <div class="search-box">
 
-      <input 
-        type="text" 
+      <input
+        type="text"
         placeholder="Pesquisar..."
       >
 
@@ -85,40 +88,51 @@
     </div>
 
     <!-- MENU -->
-    <div class="menu-icon">
+    <div
+      class="menu-area"
+      onclick="abrirMenu()"
+    >
 
-      <img 
-        src="assets/icons/menu-ham.svg" 
-        alt="Menu"
-      >
+      <h1 class="menu-texto">
+
+        Menu
+
+      </h1>
+
+      <div class="menu-icon">
+
+        <img
+          src="assets/icons/menu-ham.svg"
+          alt="Menu"
+        >
+
+      </div>
 
     </div>
 
   </nav>
 
   <!-- ======================================================
-     MENU LATERAL
-======================================================= -->
-<div class="menu-lateral hidden">
+       MENU LATERAL
+  ======================================================= -->
+  <div class="menu-lateral hidden">
 
-  <!-- TOPO -->
-  <div class="menu-topo">
+    <div class="menu-topo">
 
-    <h2>Menu</h2>
+      <h2>Menu</h2>
 
-    <button 
-      class="fechar-menu"
-      onclick="fecharMenu()"
-    >
+      <button
+        class="fechar-menu"
+        onclick="fecharMenu()"
+      >
 
-      ✕
+        ✕
 
-    </button>
+      </button>
 
-  </div>
+    </div>
 
-  <!-- LINKS -->
-   <ul>
+    <ul>
 
       <li onclick="window.location.href='index.html'">
         🏠 Início
@@ -129,89 +143,112 @@
       </li>
 
       <li onclick="window.location.href='sobre.html'">
-        📘 Sobre Nós
+        📘 Sobre
       </li>
 
       <li onclick="window.location.href='login.html'">
         👤 Perfil
       </li>
 
-      <li onclick="sairSistema()">
-        🚪 Sair
-      </li>
-
     </ul>
 
-</div>
-
+  </div>
 
   <!-- ======================================================
-       HERO
+       HERO SOBRE
   ======================================================= -->
-  <section class="hero">
+  <section class="hero-sobre">
 
-    <h1>
+    <div class="hero-container">
 
-      Sobre o <span>WorkIN</span>
+      <div class="logo-sobre">
 
-    </h1>
+        <img 
+          src="assets/img/Logo-WorkIN-Nome-Final.svg"
+          alt="WorkIN"
+        >
 
-    <p>
+      </div>
 
-      O WorkIN é uma plataforma criada para conectar
-      empresas e candidatos de forma rápida, prática e moderna.
+      <span class="tag-sobre">
 
-      Nosso objetivo é facilitar o acesso às oportunidades
-      de emprego e tornar o processo de recrutamento
-      mais eficiente para todos.
+        SOBRE O WORKIN
 
-      O projeto foi desenvolvido por uma equipe de
-      <strong>6 desenvolvedores</strong>,
-      unindo criatividade, tecnologia e inovação.
+      </span>
 
-    </p>
+      <h1>
+
+        Conectando pessoas às melhores
+        oportunidades da região.
+
+      </h1>
+
+      <p>
+
+        O WorkIN é uma plataforma criada para aproximar
+        empresas e candidatos de forma simples,
+        moderna e eficiente.
+
+        Nosso objetivo é facilitar a busca por empregos
+        e tornar o recrutamento mais acessível para todos.
+
+      </p>
+
+    </div>
 
   </section>
 
   <!-- ======================================================
-       SOBRE
+       MISSÃO VISÃO VALORES
   ======================================================= -->
-  <section class="sobre">
+  <section class="sobre-cards">
 
-    <div class="sobre-box">
+    <div class="sobre-card">
 
-      <h2>Missão</h2>
+      <div class="icone-card">
+        🎯
+      </div>
+
+      <h3>Missão</h3>
 
       <p>
 
-        Facilitar o encontro entre empresas e profissionais,
-        oferecendo uma plataforma intuitiva e eficiente.
+        Facilitar o encontro entre empresas e profissionais
+        através de uma plataforma intuitiva e moderna.
 
       </p>
 
     </div>
 
-    <div class="sobre-box">
+    <div class="sobre-card">
 
-      <h2>Visão</h2>
+      <div class="icone-card">
+        🚀
+      </div>
+
+      <h3>Visão</h3>
 
       <p>
 
-        Ser referência em recrutamento digital,
-        aproximando oportunidades de quem mais precisa.
+        Ser referência regional em oportunidades
+        digitais e conexões profissionais.
 
       </p>
 
     </div>
 
-    <div class="sobre-box">
+    <div class="sobre-card">
 
-      <h2>Valores</h2>
+      <div class="icone-card">
+        💙
+      </div>
+
+      <h3>Valores</h3>
 
       <p>
 
         Inovação, acessibilidade, praticidade,
-        colaboração e crescimento profissional.
+        ética e crescimento profissional.
 
       </p>
 
@@ -224,25 +261,29 @@
   ======================================================= -->
   <section class="equipe">
 
-    <h2>Nossa Equipe</h2>
+    <div class="titulo-section">
 
-    <p class="equipe-subtitulo">
+      <span>
 
-      O WorkIN foi desenvolvido por uma equipe de
-      6 integrantes apaixonados por tecnologia
-      e inovação.
+        NOSSA EQUIPE
 
-    </p>
+      </span>
 
-    <div class="equipe-container">
+      <h2>
+
+        Desenvolvedores do Projeto
+
+      </h2>
+
+    </div>
+
+    <div class="equipe-grid">
 
       <!-- CARD -->
-      <div class="equipe-card">
+      <div class="membro-card">
 
         <div class="numero-membro">
-
           01
-
         </div>
 
         <h3>Walter</h3>
@@ -251,118 +292,115 @@
 
         <p>
 
-          Responsável pela interface visual,
-          experiência do usuário e design do sistema.
+    Responsável pela interface visual do WorkIN,
+    desenvolvimento das páginas principais,
+    estilização da plataforma e experiência do usuário.
+
 
         </p>
 
       </div>
 
       <!-- CARD -->
-      <div class="equipe-card">
+      <div class="membro-card">
 
         <div class="numero-membro">
-
           02
-
         </div>
 
-        <h3>Desenvolvedor 2</h3>
+        <h3>Luiz Henrique</h3>
 
         <span>Front-End</span>
 
         <p>
 
-          Auxílio na construção das páginas,
-          componentes e responsividade.
+    Auxiliou na criação das páginas,
+    responsividade do sistema e organização
+    dos componentes visuais da plataforma.
 
         </p>
 
       </div>
 
       <!-- CARD -->
-      <div class="equipe-card">
+      <div class="membro-card">
 
         <div class="numero-membro">
-
           03
-
         </div>
 
-        <h3>Desenvolvedor 3</h3>
-
-        <span>Back-End</span>
-
-        <p>
-
-          Responsável pela lógica do sistema
-          e gerenciamento de dados.
-
-        </p>
-
-      </div>
-
-      <!-- CARD -->
-      <div class="equipe-card">
-
-        <div class="numero-membro">
-
-          04
-
-        </div>
-
-        <h3>Desenvolvedor 4</h3>
+        <h3>Danilo</h3>
 
         <span>UI / UX</span>
 
         <p>
 
-          Criação do design, identidade visual
-          e experiência do usuário.
+    Responsável pela identidade visual,
+    prototipação das telas e melhoria
+    da experiência de navegação do usuário.
+
 
         </p>
 
       </div>
 
       <!-- CARD -->
-      <div class="equipe-card">
+      <div class="membro-card">
 
         <div class="numero-membro">
-
-          05
-
+          04
         </div>
 
-        <h3>Desenvolvedor 5</h3>
+        <h3>Alexander</h3>
 
-        <span>Banco de Dados</span>
+        <span>UI / UX</span>
 
         <p>
 
-          Responsável pela estruturação
-          e organização dos dados.
+    Atuou no desenvolvimento da experiência
+    do usuário, design moderno da plataforma
+    e padronização visual do sistema.
 
         </p>
 
       </div>
 
       <!-- CARD -->
-      <div class="equipe-card">
+      <div class="membro-card">
 
         <div class="numero-membro">
-
-          06
-
+          05
         </div>
 
-        <h3>Desenvolvedor 6</h3>
+        <h3>Enzo</h3>
 
         <span>Documentação</span>
 
         <p>
 
-          Responsável pela documentação
-          e organização do projeto.
+    Responsável pela organização das informações,
+    documentação técnica e estruturação
+    dos conteúdos do projeto.
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="membro-card">
+
+        <div class="numero-membro">
+          06
+        </div>
+
+        <h3>David</h3>
+
+        <span>Documentação</span>
+
+        <p>
+
+    Responsável pela documentação geral,
+    organização do projeto e auxílio
+    na padronização das informações.
 
         </p>
 
@@ -375,23 +413,100 @@
   <!-- ======================================================
        FOOTER
   ======================================================= -->
-  <footer>
+  <footer class="footer">
 
-    <h1>
+    <div class="footer-container">
 
-      Work<span>IN</span>
+      <!-- LOGO -->
+      <div class="footer-logo">
 
-    </h1>
+        <div class="footer-brand">
 
-    <p>
+          <img
+            src="assets/img/Logo-WorkIN-Aba-Final.svg"
+            alt="WorkIN"
+          >
 
-      © 2026 WorkIN - Todos os direitos reservados.
+          <h2>
 
-    </p>
+            WorkIN
+
+          </h2>
+
+        </div>
+
+        <p>
+
+          Conectando talentos às melhores
+          oportunidades todos os dias.
+
+        </p>
+
+      </div>
+
+      <!-- LINKS -->
+      <div class="footer-links">
+
+        <h3>Navegação</h3>
+
+        <a href="index.html">Início</a>
+
+        <a href="vagas.html">Vagas</a>
+
+        <a href="sobre.html">Sobre nós</a>
+
+        <a href="login.html">Perfil</a>
+
+      </div>
+
+      <!-- SUPORTE -->
+      <div class="footer-links">
+
+        <h3>Suporte</h3>
+
+        <a href="#">Ajuda</a>
+
+        <a href="#">Contato</a>
+
+        <a href="#">Privacidade</a>
+
+        <a href="#">Termos</a>
+
+      </div>
+
+      <!-- REDES -->
+      <div class="footer-redes">
+
+        <h3>Redes sociais</h3>
+
+        <div class="redes-icons">
+
+          <i class="fa-brands fa-linkedin"></i>
+
+          <i class="fa-brands fa-instagram"></i>
+
+          <i class="fa-brands fa-facebook"></i>
+
+          <i class="fa-brands fa-github"></i>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-copy">
+
+      © 2026 WorkIN. Todos os direitos reservados.
+
+    </div>
 
   </footer>
- 
-  <!-- JS -->
+
+  <!-- ======================================================
+       JAVASCRIPT
+  ======================================================= -->
   <script src="assets/js/sobre.js"></script>
 
 </body>
