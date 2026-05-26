@@ -27,7 +27,10 @@
   <!-- ======================================================
        CSS
   ======================================================= -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link 
+    rel="stylesheet" 
+    href="assets/css/style.css"
+  >
 
   <!-- ======================================================
        FONT AWESOME
@@ -41,7 +44,7 @@
        FONTES
   ======================================================= -->
   <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap" 
     rel="stylesheet"
   >
 
@@ -60,7 +63,7 @@
       <a href="index.html">
 
         <img 
-          src="assets/img/Logo-WorkIN-Aba-Final.svg" 
+          src="assets/img/Logo-WorkIN-Aba-Final.svg"
           alt="WorkIN"
         >
 
@@ -73,7 +76,7 @@
 
       <input 
         type="text" 
-        placeholder="Encontre sua Vaga!"
+        placeholder="Encontre sua vaga..."
       >
 
       <button class="lupa-pesquisa">
@@ -84,16 +87,28 @@
 
     </div>
 
-    <!-- MENU -->
-    <div class="menu-icon">
+<!-- MENU -->
+<div 
+  class="menu-area"
+  onclick="abrirMenu()"
+>
 
-      <img 
-        src="assets/icons/menu-ham.svg" 
-        alt="Menu"
-      >
+  <h1 class="menu-texto">
 
-    </div>
+    Menu
 
+  </h1>
+
+  <div class="menu-icon">
+
+    <img 
+      src="assets/icons/menu-ham.svg" 
+      alt="Menu"
+    >
+
+  </div>
+
+</div>
   </nav>
 
   <!-- ======================================================
@@ -127,15 +142,11 @@
       </li>
 
       <li onclick="window.location.href='sobre.html'">
-        📘 Sobre Nós
+        📘 Sobre
       </li>
 
       <li onclick="window.location.href='login.html'">
         👤 Perfil
-      </li>
-
-      <li onclick="sairSistema()">
-        🚪 Sair
       </li>
 
     </ul>
@@ -143,175 +154,539 @@
   </div>
 
   <!-- ======================================================
-       MAIN
+       HERO
   ======================================================= -->
-  <main>
+  <section class="hero">
 
-    <!-- ======================================================
-         MOTIVAÇÃO
-    ======================================================= -->
-    <section id="telaMotivacao">
+    <div class="hero-texto">
 
-      <div class="banner">
+      <h1>
 
-        <img 
-          src="assets/img/Comeco-Banner-WorkIN.png" 
-          alt="Banner WorkIN"
-        >
+        Seu próximo emprego começa aqui.
+
+      </h1>
+
+      <p>
+
+        Encontre oportunidades em diversas áreas,
+        empresas parceiras e vagas atualizadas.
+
+      </p>
+
+      <button onclick="window.location.href='vagas.html'">
+
+        Explorar Vagas
+
+      </button>
+
+    </div>
+
+    <div class="hero-img">
+
+      <img 
+        src="assets/img/Comeco-Banner-WorkIN.png"
+        alt="Banner"
+      >
+
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       SETORES
+  ======================================================= -->
+  <section class="setores">
+
+    <h2>
+
+      Explore por Área
+
+    </h2>
+
+    <div class="setores-grid">
+
+      <div class="setor-card">
+        💻 Tecnologia
+      </div>
+
+      <div class="setor-card">
+        ⚙️ Indústria
+      </div>
+
+      <div class="setor-card">
+        🌱 Agronegócio
+      </div>
+
+      <div class="setor-card">
+        🏥 Saúde
+      </div>
+
+      <div class="setor-card">
+        🎨 Design
+      </div>
+
+      <div class="setor-card">
+        📦 Logística
+      </div>
+
+      <div class="setor-card">
+        🏗️ Construção
+      </div>
+
+      <div class="setor-card">
+        🎓 Educação
+      </div>
+
+      <div class="setor-card">
+        ☕ Alimentação
+      </div>
+
+      <div class="setor-card">
+        ⚡ Energia
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       EMPRESAS
+  ======================================================= -->
+  <section class="empresas">
+
+    <h2>
+
+      Empresas Parceiras
+
+    </h2>
+
+    <div class="empresas-grid">
+
+      <!-- EMPRESA -->
+      <div class="empresa-card">
+
+        <div class="empresa-logo">
+
+          <img 
+            src="assets/img/nexora.png"
+            alt="Nexora"
+          >
+
+        </div>
+
+        <h3>Nexora Systems</h3>
+
+        <p>
+
+          💻 Tecnologia
+
+        </p>
 
       </div>
 
-      <div class="motivacao-texto">
+      <!-- EMPRESA -->
+      <div class="empresa-card">
 
-        <h2 class="motivacao">
+        <div class="empresa-logo">
 
-          Nunca desista! Toda oportunidade começa com uma tentativa.
-          Seu próximo emprego pode estar mais perto do que você imagina.
+          <img 
+            src="assets/img/ferrovale.png"
+            alt="FerroVale"
+          >
+
+        </div>
+
+        <h3>FerroVale</h3>
+
+        <p>
+
+          ⚙️ Metalúrgica
+
+        </p>
+
+      </div>
+
+      <!-- EMPRESA -->
+      <div class="empresa-card">
+
+        <div class="empresa-logo">
+
+          <img 
+            src="assets/img/agroverde.png"
+            alt="AgroVerde"
+          >
+
+        </div>
+
+        <h3>AgroVerde Brasil</h3>
+
+        <p>
+
+          🌱 Agronegócio
+
+        </p>
+
+      </div>
+
+      <!-- EMPRESA -->
+      <div class="empresa-card">
+
+        <div class="empresa-logo">
+
+          <img 
+            src="assets/img/vitacare.png"
+            alt="VitaCare"
+          >
+
+        </div>
+
+        <h3>VitaCare Clínica</h3>
+
+        <p>
+
+          🏥 Saúde
+
+        </p>
+
+      </div>
+
+      <!-- EMPRESA -->
+      <div class="empresa-card">
+
+        <div class="empresa-logo">
+
+          <img 
+            src="assets/img/pixelforge.png"
+            alt="PixelForge"
+          >
+
+        </div>
+
+        <h3>PixelForge</h3>
+
+        <p>
+
+          🎨 Design
+
+        </p>
+
+      </div>
+
+      <!-- EMPRESA -->
+      <div class="empresa-card">
+
+        <div class="empresa-logo">
+
+          <img 
+            src="assets/img/fastroute.png"
+            alt="FastRoute"
+          >
+
+        </div>
+
+        <h3>FastRoute</h3>
+
+        <p>
+
+          📦 Logística
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       COMO FUNCIONA
+  ======================================================= -->
+  <section class="como-funciona">
+
+    <h2>
+
+      Como Funciona
+
+    </h2>
+
+    <div class="passos-grid">
+
+      <!-- PASSO -->
+      <div class="passo-card">
+
+        <span>1</span>
+
+        <h3>
+
+          Pesquise
+
+        </h3>
+
+        <p>
+
+          Explore vagas por área ou empresa.
+
+        </p>
+
+      </div>
+
+      <!-- PASSO -->
+      <div class="passo-card">
+
+        <span>2</span>
+
+        <h3>
+
+          Encontre
+
+        </h3>
+
+        <p>
+
+          Descubra oportunidades e informações.
+
+        </p>
+
+      </div>
+
+      <!-- PASSO -->
+      <div class="passo-card">
+
+        <span>3</span>
+
+        <h3>
+
+          Entre em Contato
+
+        </h3>
+
+        <p>
+
+          Utilize os contatos disponíveis da vaga.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ======================================================
+       VAGAS DESTAQUE
+  ======================================================= -->
+  <section class="destaques">
+
+    <h2>
+
+      Vagas em Destaque
+
+    </h2>
+
+    <div class="destaques-grid">
+
+      <!-- VAGA -->
+      <div class="vaga-card">
+
+        <h3>
+
+          Desenvolvedor Full Stack
+
+        </h3>
+
+        <span>
+
+          Nexora Systems
+
+        </span>
+
+        <p>
+
+          React • Node.js • Remoto
+
+        </p>
+
+        <button onclick="window.location.href='vagas.html'">
+
+          Ver Vaga
+
+        </button>
+
+      </div>
+
+      <!-- VAGA -->
+      <div class="vaga-card">
+
+        <h3>
+
+          Engenheiro Agrônomo
+
+        </h3>
+
+        <span>
+
+          AgroVerde Brasil
+
+        </span>
+
+        <p>
+
+          Gestão agrícola • CREA
+
+        </p>
+
+        <button onclick="window.location.href='vagas.html'">
+
+          Ver Vaga
+
+        </button>
+
+      </div>
+
+      <!-- VAGA -->
+      <div class="vaga-card">
+
+        <h3>
+
+          Técnico Solar
+
+        </h3>
+
+        <span>
+
+          EcoVolt Energia
+
+        </span>
+
+        <p>
+
+          NR10 • Energia Solar
+
+        </p>
+
+        <button onclick="window.location.href='vagas.html'">
+
+          Ver Vaga
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+<!-- ======================================================
+     FOOTER
+======================================================= -->
+<footer class="footer">
+
+  <div class="footer-container">
+
+    <!-- LOGO -->
+    <div class="footer-logo">
+
+      <div class="footer-brand">
+
+        <img 
+          src="assets/img/Logo-WorkIN-Aba-Final.svg"
+          alt="WorkIN"
+        >
+
+        <h2>
+
+          WorkIN
 
         </h2>
 
       </div>
 
-    </section>
+      <p>
 
-    <!-- ======================================================
-         EMPRESAS
-    ======================================================= -->
-    <section id="telaEmpresa">
+        Conectando talentos às melhores
+        oportunidades todos os dias.
 
-      <!-- ======================================================
-           GRID DE EMPRESAS
-      ======================================================= -->
-      <div 
-        class="empresas-grid"
-        id="cardsEmpresas"
-      >
+      </p>
 
-        <!-- JS INSERE AS EMPRESAS -->
+    </div>
 
-      </div>
+    <!-- NAVEGAÇÃO -->
+    <div class="footer-links">
 
-    </section>
+      <h3>Navegação</h3>
 
-    <!-- ======================================================
-         LISTA DE VAGAS
-    ======================================================= -->
-    <section 
-      id="telaVagas" 
-      class="hidden"
-    >
+      <a href="index.html">Início</a>
 
-      <div class="vaga-container">
+      <a href="vagas.html">Vagas</a>
 
-        <!-- VOLTAR -->
-        <div 
-          class="topo-voltar"
-          onclick="voltarEmpresa()"
-        >
+      <a href="#">Empresas</a>
 
-          ⬅ Voltar
+      <a href="sobre.html">Sobre nós</a>
 
-        </div>
+    </div>
 
-        <!-- LISTA -->
-        <div id="listaVagas">
+    <!-- EMPRESAS -->
+    <div class="footer-links">
 
-          <!-- JS INSERE AS VAGAS -->
+      <h3>Para empresas</h3>
 
-        </div>
+      <a href="#">Publicar vagas</a>
 
-      </div>
+      <a href="#">Planos</a>
 
-    </section>
+      <a href="#">Soluções</a>
 
-    <!-- ======================================================
-         DETALHE DA VAGA
-    ======================================================= -->
-    <section 
-      id="telaDetalhe" 
-      class="hidden"
-    >
+      <a href="#">Contato</a>
 
-      <div class="vaga-container">
+    </div>
 
-        <!-- VOLTAR -->
-        <div 
-          class="topo-voltar"
-          onclick="voltarLista()"
-        >
+    <!-- SUPORTE -->
+    <div class="footer-links">
 
-          ⬅ Voltar
+      <h3>Suporte</h3>
 
-        </div>
+      <a href="#">Central de ajuda</a>
 
-        <!-- TÍTULO -->
-        <h2 id="tituloVaga"></h2>
+      <a href="#">Dicas de carreira</a>
 
-        <!-- BOX -->
-        <div class="detalhe-box">
+      <a href="#">Termos de uso</a>
 
-          <p>
+      <a href="#">Privacidade</a>
 
-            <strong>Requisitos:</strong>
+    </div>
 
-          </p>
+    <!-- REDES -->
+    <div class="footer-redes">
 
-          <!-- REQUISITOS -->
-          <ul id="requisitos"></ul>
+      <h3>Redes sociais</h3>
 
-          <p>
+      <div class="redes-icons">
 
-            <strong>Horário:</strong>
+        <i class="fa-brands fa-linkedin"></i>
 
-            <span id="horario"></span>
+        <i class="fa-brands fa-instagram"></i>
 
-          </p>
+        <i class="fa-brands fa-facebook"></i>
 
-          <p>
-
-            <strong>Regime:</strong>
-
-            <span id="regime"></span>
-
-          </p>
-
-          <p>
-
-            <strong>Contato:</strong>
-
-            <span id="contato"></span>
-
-          </p>
-
-        </div>
+        <i class="fa-brands fa-github"></i>
 
       </div>
 
-    </section>
+    </div>
 
-  </main>
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-copy">
+
+    © 2026 WorkIN. Todos os direitos reservados.
+
+  </div>
+
+</footer>
 
   <!-- ======================================================
-       FOOTER
-  ======================================================= -->
-  <footer>
-
-    <h1>
-
-      Work<span>IN</span>
-
-    </h1>
-
-    <p>
-
-      © 2026 WorkIN - Todos os direitos reservados.
-
-    </p>
-
-  </footer>
-
-  <!-- ======================================================
-       JS
+       JAVASCRIPT
   ======================================================= -->
   <script src="assets/js/script.js"></script>
 

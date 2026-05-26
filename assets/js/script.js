@@ -1,411 +1,5 @@
 // =========================================================
-// DADOS DAS EMPRESAS
-// =========================================================
-const empresas = [
-
-  // =======================================================
-  // MARCHESAN
-  // =======================================================
-  {
-    nome: "Marchesan S.A.",
-
-    logo: "assets/img/marchesan-sf.png",
-
-    endereco: "📍 João Marchesan, 1979 - Jardim Pereira",
-
-    vagas: [
-
-      {
-        titulo: "Inspetor de Qualidade",
-
-        quantidade: "+15",
-
-        requisitos: [
-          "Ensino Médio Completo",
-          "Técnico Mecânico",
-          "Leitura de desenho técnico",
-          "Metrologia"
-        ],
-
-        horario: "08h às 15h",
-
-        regime: "CLT",
-
-        contato: "(16) 3221-6500"
-      },
-
-      {
-        titulo: "Soldador",
-
-        quantidade: "+25",
-
-        requisitos: [
-          "Solda MIG/TIG",
-          "Experiência na área"
-        ],
-
-        horario: "07h às 17h",
-
-        regime: "CLT",
-
-        contato: "(16) 3221-6500"
-      }
-
-    ]
-  },
-
-  // =======================================================
-  // BALDAN
-  // =======================================================
-  {
-    nome: "Baldan Implementos",
-
-    logo: "assets/img/baldan.png",
-
-    endereco: "📍 Av. Baldan, Distrito Industrial - Matão/SP",
-
-    vagas: [
-
-      {
-        titulo: "Auxiliar de Produção",
-
-        quantidade: "+30",
-
-        requisitos: [
-          "Ensino Médio Completo",
-          "Disponibilidade de horário"
-        ],
-
-        horario: "07h às 17h",
-
-        regime: "CLT",
-
-        contato: "(16) 3383-9999"
-      },
-
-      {
-        titulo: "Torneiro Mecânico",
-
-        quantidade: "+12",
-
-        requisitos: [
-          "Curso de Torno",
-          "Experiência na função"
-        ],
-
-        horario: "08h às 18h",
-
-        regime: "CLT",
-
-        contato: "(16) 3383-9999"
-      }
-
-    ]
-  },
-
-  // =======================================================
-  // CITROSUCO
-  // =======================================================
-  {
-    nome: "Citrosuco",
-
-    logo: "assets/img/citrosuco.png",
-
-    endereco: "📍 Rodovia Washington Luís - Matão/SP",
-
-    vagas: [
-
-      {
-        titulo: "Motorista",
-
-        quantidade: "+18",
-
-        requisitos: [
-          "CNH E",
-          "Experiência com caminhão"
-        ],
-
-        horario: "Turnos",
-
-        regime: "CLT",
-
-        contato: "(16) 3382-5000"
-      },
-
-      {
-        titulo: "Técnico de Segurança",
-
-        quantidade: "+10",
-
-        requisitos: [
-          "Curso Técnico",
-          "Experiência na área"
-        ],
-
-        horario: "08h às 18h",
-
-        regime: "CLT",
-
-        contato: "(16) 3382-5000"
-      }
-
-    ]
-  },
-
-  // =======================================================
-  // LOUIS DREYFUS
-  // =======================================================
-  {
-    nome: "Louis Dreyfus Company",
-
-    logo: "assets/img/ldc.png",
-
-    endereco: "📍 Distrito Industrial - Matão/SP",
-
-    vagas: [
-
-      {
-        titulo: "Eletricista Industrial",
-
-        quantidade: "+9",
-
-        requisitos: [
-          "NR10",
-          "Experiência industrial"
-        ],
-
-        horario: "08h às 18h",
-
-        regime: "CLT",
-
-        contato: "(16) 3333-4444"
-      },
-
-      {
-        titulo: "Mecânico Industrial",
-
-        quantidade: "+14",
-
-        requisitos: [
-          "Mecânica Industrial",
-          "Experiência"
-        ],
-
-        horario: "07h às 17h",
-
-        regime: "CLT",
-
-        contato: "(16) 3333-4444"
-      }
-
-    ]
-  },
-
-  // =======================================================
-  // PREDILECTA
-  // =======================================================
-  {
-    nome: "Predilecta Alimentos",
-
-    logo: "assets/img/predilecta.png",
-
-    endereco: "📍 Via Predilecta, 50 - Matão/SP",
-
-    vagas: [
-
-      {
-        titulo: "Auxiliar de Produção",
-
-        quantidade: "+40",
-
-        requisitos: [
-          "Ensino Médio Completo",
-          "Disponibilidade de horário"
-        ],
-
-        horario: "Turnos",
-
-        regime: "CLT",
-
-        contato: "(16) 3383-4100"
-      },
-
-      {
-        titulo: "Analista Administrativo",
-
-        quantidade: "+8",
-
-        requisitos: [
-          "Pacote Office",
-          "Boa comunicação"
-        ],
-
-        horario: "08h às 18h",
-
-        regime: "CLT",
-
-        contato: "(16) 3383-4100"
-      }
-
-    ]
-  },
-
-  // =======================================================
-  // GRUPO BASSI
-  // =======================================================
-  {
-    nome: "Grupo Bassi",
-
-    logo: "assets/img/bassi.png",
-
-    endereco: "📍 Av. Angelim Ré, 1503 - Matão/SP",
-
-    vagas: [
-
-      {
-        titulo: "Soldador",
-
-        quantidade: "+20",
-
-        requisitos: [
-          "Solda MIG",
-          "Experiência"
-        ],
-
-        horario: "07h às 17h",
-
-        regime: "CLT",
-
-        contato: "(16) 3384-3681"
-      },
-
-      {
-        titulo: "Operador Industrial",
-
-        quantidade: "+16",
-
-        requisitos: [
-          "Ensino Médio",
-          "Experiência industrial"
-        ],
-
-        horario: "Turnos",
-
-        regime: "CLT",
-
-        contato: "(16) 3384-3681"
-      }
-
-    ]
-  },
-
-  // =======================================================
-  // CAMBUHY
-  // =======================================================
-  {
-    nome: "Cambuhy Agrícola",
-
-    logo: "assets/img/cambuhy.png",
-
-    endereco: "📍 Rodovia Washington Luís KM 307 - Matão/SP",
-
-    vagas: [
-
-      {
-        titulo: "Operador Agrícola",
-
-        quantidade: "+22",
-
-        requisitos: [
-          "CNH B",
-          "Experiência agrícola"
-        ],
-
-        horario: "08h às 17h",
-
-        regime: "CLT",
-
-        contato: "(16) 3383-3000"
-      },
-
-      {
-        titulo: "Motorista",
-
-        quantidade: "+11",
-
-        requisitos: [
-          "CNH D",
-          "Experiência"
-        ],
-
-        horario: "Turnos",
-
-        regime: "CLT",
-
-        contato: "(16) 3383-3000"
-      }
-
-    ]
-  },
-
-  // =======================================================
-  // ROTHOBRAS
-  // =======================================================
-  {
-    nome: "Rothobras",
-
-    logo: "assets/img/rothobras.png",
-
-    endereco: "📍 Distrito Industrial Silvania - Matão/SP",
-
-    vagas: [
-
-      {
-        titulo: "Operador de Máquinas",
-
-        quantidade: "+13",
-
-        requisitos: [
-          "Experiência industrial",
-          "Disponibilidade"
-        ],
-
-        horario: "07h às 17h",
-
-        regime: "CLT",
-
-        contato: "(16) 3394-3579"
-      },
-
-      {
-        titulo: "Auxiliar de Almoxarifado",
-
-        quantidade: "+6",
-
-        requisitos: [
-          "Organização",
-          "Pacote Office"
-        ],
-
-        horario: "08h às 18h",
-
-        regime: "CLT",
-
-        contato: "(16) 3394-3579"
-      }
-
-    ]
-  }
-
-];
-
-// =========================================================
-// VARIÁVEIS
-// =========================================================
-let empresaAtual = 0;
-
-// =========================================================
-// MENU
+// MENU LATERAL
 // =========================================================
 const menuIcon =
   document.querySelector(".menu-icon");
@@ -413,6 +7,9 @@ const menuIcon =
 const menuLateral =
   document.querySelector(".menu-lateral");
 
+// =========================================================
+// ABRIR MENU
+// =========================================================
 menuIcon.addEventListener("click", abrirMenu);
 
 function abrirMenu(){
@@ -421,6 +18,9 @@ function abrirMenu(){
 
 }
 
+// =========================================================
+// FECHAR MENU
+// =========================================================
 function fecharMenu(){
 
   menuLateral.classList.add("hidden");
@@ -428,156 +28,191 @@ function fecharMenu(){
 }
 
 // =========================================================
-// CARREGAR EMPRESAS
+// SAIR
 // =========================================================
-function carregarEmpresas(){
+function sairSistema(){
 
-  const container =
-    document.getElementById("cardsEmpresas");
+  window.location.href = "login.html";
 
-  container.innerHTML = "";
+}
 
-  empresas.forEach((empresa, index) => {
+// =========================================================
+// PESQUISA
+// =========================================================
+const pesquisaInput =
+  document.getElementById("pesquisa");
 
-    container.innerHTML += `
+pesquisaInput.addEventListener("keyup", pesquisarEmpresas);
 
-      <div class="card">
+// =========================================================
+// PESQUISAR EMPRESAS
+// =========================================================
+function pesquisarEmpresas(){
 
-        <h1>
+  const texto =
+    pesquisaInput.value.toLowerCase();
 
-          ${empresa.nome}
+  const cards =
+    document.querySelectorAll(".card");
 
-        </h1>
+  cards.forEach(card => {
 
-        <div class="logo-empresa">
+    const titulo =
+      card.querySelector("h1")
+      .innerText
+      .toLowerCase();
 
-          <img 
-            src="${empresa.logo}" 
-            alt="${empresa.nome}"
-          >
+    if(titulo.includes(texto)){
 
-        </div>
+      card.style.display = "flex";
 
-        <p>
+    } else {
 
-          ${empresa.endereco}
+      card.style.display = "none";
 
-        </p>
-
-        <div class="bottom">
-
-          <span>
-
-            👜 ${empresa.vagas.length} vagas abertas
-
-          </span>
-
-          <button onclick="abrirVagas(${index})">
-
-            Detalhes →
-
-          </button>
-
-        </div>
-
-      </div>
-
-    `;
+    }
 
   });
 
 }
 
 // =========================================================
-// ABRIR VAGAS
+// BOTÕES DAS EMPRESAS
 // =========================================================
-function abrirVagas(index){
+const botoes =
+  document.querySelectorAll(".btn-vagas");
 
-  empresaAtual = index;
+botoes.forEach(botao => {
 
-  const empresa =
-    empresas[index];
+  botao.addEventListener("click", () => {
 
-  document
-    .getElementById("telaVagas")
-    .classList.remove("hidden");
-
-  const container =
-    document.getElementById("listaVagas");
-
-  container.innerHTML = "";
-
-  empresa.vagas.forEach((vaga, vagaIndex) => {
-
-    container.innerHTML += `
-
-      <div 
-        class="vaga-item"
-        onclick="abrirDetalhe(${vagaIndex})"
-      >
-
-        ${vaga.titulo}
-
-        <span>
-
-          ${vaga.quantidade}
-
-        </span>
-
-      </div>
-
-    `;
+    window.location.href =
+      "vagas.html";
 
   });
 
-}
+});
 
 // =========================================================
-// ABRIR DETALHE
+// ANIMAÇÃO DOS CARDS
 // =========================================================
-function abrirDetalhe(index){
+const cards =
+  document.querySelectorAll(".card");
 
-  const vaga =
-    empresas[empresaAtual].vagas[index];
+cards.forEach((card, index) => {
 
-  document
-    .getElementById("telaDetalhe")
-    .classList.remove("hidden");
+  card.style.opacity = "0";
 
-  document
-    .getElementById("tituloVaga")
-    .innerText = vaga.titulo;
+  card.style.transform =
+    "translateY(40px)";
 
-  const lista =
-    document.getElementById("requisitos");
+  setTimeout(() => {
 
-  lista.innerHTML = "";
+    card.style.transition =
+      "0.5s ease";
 
-  vaga.requisitos.forEach(req => {
+    card.style.opacity = "1";
 
-    lista.innerHTML += `
+    card.style.transform =
+      "translateY(0)";
 
-      <li>${req}</li>
+  }, index * 120);
 
-    `;
+});
+
+// =========================================================
+// SCROLL SUAVE
+// =========================================================
+document.querySelectorAll("a").forEach(link => {
+
+  link.addEventListener("click", function(e){
+
+    const href =
+      this.getAttribute("href");
+
+    if(href.startsWith("#")){
+
+      e.preventDefault();
+
+      document.querySelector(href)
+        .scrollIntoView({
+
+          behavior: "smooth"
+
+        });
+
+    }
 
   });
 
-  document
-    .getElementById("horario")
-    .innerText = vaga.horario;
-
-  document
-    .getElementById("regime")
-    .innerText = vaga.regime;
-
-  document
-    .getElementById("contato")
-    .innerText = vaga.contato;
-
-}
+});
 
 // =========================================================
-// INICIAR
+// EFEITO NAVBAR
 // =========================================================
-carregarEmpresas();
+window.addEventListener("scroll", () => {
+
+  const navbar =
+    document.querySelector(".navbar");
+
+  if(window.scrollY > 20){
+
+    navbar.style.boxShadow =
+      "0 4px 12px rgba(0,0,0,0.15)";
+
+  } else {
+
+    navbar.style.boxShadow =
+      "none";
+
+  }
+
+});
+
+// =========================================================
+// FECHAR MENU AO CLICAR FORA
+// =========================================================
+window.addEventListener("click", (e) => {
+
+  if(
+
+    !menuLateral.contains(e.target)
+    &&
+    !menuIcon.contains(e.target)
+
+  ){
+
+    menuLateral.classList.add("hidden");
+
+  }
+
+});
+
+// =========================================================
+// LOADING
+// =========================================================
+window.addEventListener("load", () => {
+
+  document.body.style.opacity = "1";
+
+});
+
+// =========================================================
+// EFEITO HOVER LOGO
+// =========================================================
+const logo =
+  document.querySelector(".logo img");
+
+logo.addEventListener("mouseover", () => {
+
+  logo.style.transform =
+    "scale(1.08)";
+
+});
+
+logo.addEventListener("mouseout", () => {
+
+  logo.style.transform =
+    "scale(1)";
+
+});
