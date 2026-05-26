@@ -5,29 +5,32 @@
 
   <meta charset="UTF-8">
 
-  <meta 
-    name="viewport" 
+  <meta
+    name="viewport"
     content="width=device-width, initial-scale=1.0"
   >
 
   <title>Login - WorkIN</title>
 
-
-  <!-- ======================================================
-     ÍCONE DA ABA
-======================================================= -->
-<link 
-  rel="icon" 
-  type="image/png" 
-  href="assets/img/Logo-WorkIN-Aba-Final.svg"
-/>
+  <!-- FAVICON -->
+  <link
+    rel="icon"
+    type="image/png"
+    href="assets/img/Logo-WorkIN-Aba-Final.svg"
+  >
 
   <!-- CSS -->
   <link rel="stylesheet" href="assets/css/login.css">
 
-  <!-- FONT -->
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" 
+  <!-- FONT AWESOME -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <!-- FONTES -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
     rel="stylesheet"
   >
 
@@ -35,177 +38,317 @@
 
 <body>
 
-<!-- ======================================================
-     NAVBAR
-======================================================= -->
-<nav class="navbar">
-
-  <!-- LOGO -->
-  <div class="logo">
-
-    <a href="index.html">
-
-      <img 
-        src="assets/img/Logo-WorkIN-Aba-Final.svg"
-        alt="WorkIN"
-      >
-
-    </a>
-
-  </div>
-
-  <!-- MENU HAMBÚRGUER -->
-  <div class="menu-icon">
-
-    <img 
-      src="assets/icons/menu-ham.svg" 
-      alt="Menu"
-    >
-
-  </div>
-
-</nav>
-
-<!-- ======================================================
-     MENU LATERAL
-======================================================= -->
-<div class="menu-lateral hidden">
-
-  <!-- TOPO -->
-  <div class="menu-topo">
-
-    <h2>Menu</h2>
-
-    <button 
-      class="fechar-menu"
-      onclick="fecharMenu()"
-    >
-
-      ✕
-
-    </button>
-
-  </div>
-
-  <!-- LINKS -->
-   <ul>
-
-      <li onclick="window.location.href='index.html'">
-        🏠 Início
-      </li>
-
-      <li onclick="window.location.href='vagas.html'">
-        💼 Vagas
-      </li>
-
-      <li onclick="window.location.href='sobre.html'">
-        📘 Sobre Nós
-      </li>
-
-      <li onclick="window.location.href='login.html'">
-        👤 Perfil
-      </li>
-
-      <li onclick="sairSistema()">
-        🚪 Sair
-      </li>
-
-    </ul>
-
-</div>
   <!-- ======================================================
-       MAIN
+       FUNDO
   ======================================================= -->
-  <main>
+  <div class="background-login"></div>
 
-    <!-- LOGIN CONTAINER -->
-    <div class="login-container">
+  <!-- ======================================================
+       CONTAINER
+  ======================================================= -->
+  <main class="login-container">
 
-      <!-- LOGO -->
-      <img 
+    <!-- ======================================================
+         LADO ESQUERDO
+    ======================================================= -->
+    <section class="login-left">
+
+      <img
         src="assets/img/Logo-WorkIN-Aba-Final.svg"
         alt="WorkIN"
         class="logo-login"
       >
 
-      <!-- TABS -->
-      <div class="tabs">
+      <h1>
 
-        <button 
-          class="tab-btn ativo"
-          onclick="mostrarLogin()"
-          id="btnLogin"
-        >
+        Bem-vindo ao <span>WorkIN</span>
 
-          Login
+      </h1>
 
-        </button>
+      <p>
 
-        <button 
-          class="tab-btn"
-          onclick="mostrarCadastro()"
-          id="btnCadastro"
-        >
+        Conectando profissionais às melhores
+        oportunidades da região de Matão.
 
-          Cadastro
+      </p>
 
-        </button>
+      <div class="login-info">
 
-      </div>
+        <div class="info-box">
 
-      <!-- LOGIN -->
-      <div class="form-box" id="loginBox">
+          <i class="fa-solid fa-briefcase"></i>
 
-        <input 
-          type="email"
-          id="email"
-          placeholder="Digite seu email"
-        >
+          <span>
+            +500 vagas disponíveis
+          </span>
 
-        <input 
-          type="password"
-          id="senha"
-          placeholder="Digite sua senha"
-        >
+        </div>
 
-        <button onclick="login()">
+        <div class="info-box">
 
-          Entrar
+          <i class="fa-solid fa-building"></i>
 
-        </button>
+          <span>
+            Empresas reais parceiras
+          </span>
 
-      </div>
+        </div>
 
-      <!-- CADASTRO -->
-      <div class="form-box hidden" id="cadastroBox">
+        <div class="info-box">
 
-        <input 
-          type="text"
-          id="nomeCadastro"
-          placeholder="Seu nome"
-        >
+          <i class="fa-solid fa-user-check"></i>
 
-        <input 
-          type="email"
-          id="emailCadastro"
-          placeholder="Seu email"
-        >
+          <span>
+            Plataforma rápida e segura
+          </span>
 
-        <input 
-          type="password"
-          id="senhaCadastro"
-          placeholder="Sua senha"
-        >
-
-        <button onclick="cadastrar()">
-
-          Criar Conta
-
-        </button>
+        </div>
 
       </div>
 
-    </div>
+    </section>
+
+    <!-- ======================================================
+         LOGIN / CADASTRO
+    ======================================================= -->
+    <section class="login-right">
+
+      <div class="login-card">
+
+        <!-- TABS -->
+        <div class="tabs">
+
+          <button
+            class="tab active"
+            onclick="mostrarLogin()"
+          >
+
+            Entrar
+
+          </button>
+
+          <button
+            class="tab"
+            onclick="mostrarCadastro()"
+          >
+
+            Cadastro
+
+          </button>
+
+        </div>
+
+        <!-- ======================================================
+             LOGIN
+        ======================================================= -->
+        <div id="form-login-area">
+
+          <h2>
+
+            Entrar
+
+          </h2>
+
+          <p class="subtitulo">
+
+            Faça login para acessar sua conta.
+
+          </p>
+
+          <form id="formLogin">
+
+            <!-- EMAIL -->
+            <div class="input-group">
+
+              <label>E-mail</label>
+
+              <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                  type="email"
+                  id="emailLogin"
+                  placeholder="Digite seu e-mail"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+            <!-- SENHA -->
+            <div class="input-group">
+
+              <label>Senha</label>
+
+              <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="senhaLogin"
+                  placeholder="Digite sua senha"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="mostrar-senha"
+                  onclick="toggleSenha('senhaLogin', this)"
+                >
+
+                  <i class="fa-solid fa-eye"></i>
+
+                </button>
+
+              </div>
+
+            </div>
+
+            <!-- OPÇÕES -->
+            <div class="login-options">
+
+              <label class="checkbox-area">
+
+                <input type="checkbox">
+
+                Lembrar-me
+
+              </label>
+
+              <a href="#">
+
+                Esqueci minha senha
+
+              </a>
+
+            </div>
+
+            <!-- BOTÃO -->
+            <button
+              type="submit"
+              class="btn-login"
+            >
+
+              Entrar
+
+            </button>
+
+          </form>
+
+        </div>
+
+        <!-- ======================================================
+             CADASTRO
+        ======================================================= -->
+        <div
+          id="form-cadastro-area"
+          class="hidden"
+        >
+
+          <h2>
+
+            Criar Conta
+
+          </h2>
+
+          <p class="subtitulo">
+
+            Cadastre-se para encontrar vagas.
+
+          </p>
+
+          <form id="formCadastro">
+
+            <!-- NOME -->
+            <div class="input-group">
+
+              <label>Nome Completo</label>
+
+              <div class="input-box">
+
+                <i class="fa-solid fa-user"></i>
+
+                <input
+                  type="text"
+                  id="nomeCadastro"
+                  placeholder="Digite seu nome"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+            <!-- EMAIL -->
+            <div class="input-group">
+
+              <label>E-mail</label>
+
+              <div class="input-box">
+
+                <i class="fa-solid fa-envelope"></i>
+
+                <input
+                  type="email"
+                  id="emailCadastro"
+                  placeholder="Digite seu e-mail"
+                  required
+                >
+
+              </div>
+
+            </div>
+
+            <!-- SENHA -->
+            <div class="input-group">
+
+              <label>Senha</label>
+
+              <div class="input-box">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <input
+                  type="password"
+                  id="senhaCadastro"
+                  placeholder="Crie uma senha"
+                  required
+                >
+
+                <button
+                  type="button"
+                  class="mostrar-senha"
+                  onclick="toggleSenha('senhaCadastro', this)"
+                >
+
+                  <i class="fa-solid fa-eye"></i>
+
+                </button>
+
+              </div>
+
+            </div>
+
+            <!-- BOTÃO -->
+            <button
+              type="submit"
+              class="btn-login"
+            >
+
+              Criar Conta
+
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </section>
 
   </main>
 
@@ -214,13 +357,42 @@
   ======================================================= -->
   <footer>
 
-    <h1>
+    <div class="footer-content">
 
-      Work<span>IN</span>
+      <div class="footer-logo">
 
-    </h1>
+        <img
+          src="assets/img/Logo-WorkIN-Aba-Final.svg"
+          alt="WorkIN"
+        >
 
-    <p>
+        <h1>
+
+          Work<span>IN</span>
+
+        </h1>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="index.html">
+          Início
+        </a>
+
+        <a href="vagas.html">
+          Vagas
+        </a>
+
+        <a href="sobre.html">
+          Sobre
+        </a>
+
+      </div>
+
+    </div>
+
+    <p class="footer-copy">
 
       © 2026 WorkIN - Todos os direitos reservados.
 

@@ -12,7 +12,7 @@
 ========================================================= */
 body{
 
-  background: #F2F7FF;
+  background: #F4F7FF;
 
   font-family: 'Inter', sans-serif;
 
@@ -310,7 +310,10 @@ img{
 ========================================================= */
 .hero-texto{
 
-  width: 50%;
+  width: 65%;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 20px;
 }
 
 .hero-texto h1{
@@ -374,7 +377,7 @@ img{
 }
 
 .hero-img img{
-
+  border-radius: 20px;
   width: 100%;
 }
 
