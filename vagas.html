@@ -3,9 +3,6 @@
 
 <head>
 
-  <!-- ======================================================
-       CONFIGURAÇÕES
-  ======================================================= -->
   <meta charset="UTF-8">
 
   <meta
@@ -15,46 +12,38 @@
 
   <title>Vagas - WorkIN</title>
 
-  <!-- ======================================================
-       FAVICON
-  ======================================================= -->
+  <!-- FAVICON -->
   <link
     rel="icon"
     type="image/png"
     href="assets/img/Logo-WorkIN-Aba-Final.svg"
   >
 
-  <!-- ======================================================
-       GOOGLE FONTS
-  ======================================================= -->
+  <!-- CSS -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
     rel="stylesheet"
+    href="assets/css/vagas.css"
   >
 
-  <!-- ======================================================
-       FONT AWESOME
-  ======================================================= -->
+  <!-- FONT AWESOME -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
   >
 
-  <!-- ======================================================
-       CSS
-  ======================================================= -->
-  <link rel="stylesheet" href="assets/css/vagas.css">
+  <!-- FONTES -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
 </head>
 
 <body>
 
-  <!-- ======================================================
-       NAVBAR
-  ======================================================= -->
+  <!-- NAVBAR -->
   <nav class="navbar">
 
-    <!-- LOGO -->
     <div class="logo">
 
       <a href="index.html">
@@ -68,15 +57,12 @@
 
     </div>
 
-    <!-- ======================================================
-         PESQUISA
-    ======================================================= -->
     <div class="search-box">
 
       <input
         type="text"
         id="pesquisa"
-        placeholder="Encontre sua Vaga!"
+        placeholder="Pesquisar vagas..."
         onkeyup="pesquisarVagas()"
       >
 
@@ -88,34 +74,28 @@
 
     </div>
 
-    <!-- ======================================================
-         MENU HAMBÚRGUER
-    ======================================================= -->
     <div
-      class="menu-icon"
+      class="menu-area"
       onclick="abrirMenu()"
     >
 
-      <img
-        src="assets/icons/menu-ham.svg"
-        alt="Menu"
-      >
+      <span class="menu-texto">
+        Menu
+      </span>
+
+      <i class="fa-solid fa-bars"></i>
 
     </div>
 
   </nav>
 
-  <!-- ======================================================
-       MENU LATERAL
-  ======================================================= -->
+  <!-- MENU -->
   <div class="menu-lateral hidden">
 
-    <!-- TOPO MENU -->
     <div class="menu-topo">
 
       <h2>Menu</h2>
 
-      <!-- BOTÃO FECHAR -->
       <button
         class="fechar-menu"
         onclick="fecharMenu()"
@@ -127,7 +107,6 @@
 
     </div>
 
-    <!-- LISTA -->
     <ul>
 
       <li onclick="window.location.href='index.html'">
@@ -139,71 +118,61 @@
       </li>
 
       <li onclick="window.location.href='sobre.html'">
-        📘 Sobre Nós
+        📘 Sobre
       </li>
 
       <li onclick="window.location.href='login.html'">
         👤 Perfil
       </li>
 
-      <li onclick="sairSistema()">
-        🚪 Sair
-      </li>
-
     </ul>
 
   </div>
 
-  <!-- ======================================================
-       TÍTULO
-  ======================================================= -->
-  <section class="titulo-vagas">
+  <!-- HERO -->
+  <section class="hero-vagas">
 
-    <h1>
+    <div class="hero-texto">
 
-      Vagas Disponíveis
+      <h1>
 
-    </h1>
+        Encontre sua próxima oportunidade
 
-    <p>
+      </h1>
 
-      Confira as oportunidades cadastradas pelas empresas.
+      <p>
 
-    </p>
+        Empresas reais com vagas abertas em diversas áreas.
+
+      </p>
+
+    </div>
 
   </section>
 
-  <!-- ======================================================
-       CONTAINER VAGAS
-  ======================================================= -->
-  <main class="vagas-container">
+  <!-- VAGAS -->
+  <section class="vagas-section">
 
-    <!-- JAVASCRIPT INSERE AS VAGAS -->
+    <div
+      class="vagas-container"
+      id="vagasContainer"
+    >
 
-  </main>
+    </div>
 
-  <!-- ======================================================
-       FOOTER
-  ======================================================= -->
-  <footer>
+  </section>
 
-    <h1>
+  <!-- FOOTER -->
+  <footer class="footer">
 
-      Work<span>IN</span>
+    <div class="footer-copy">
 
-    </h1>
+      © 2026 WorkIN • Todos os direitos reservados
 
-    <p>
-
-      © 2026 WorkIN - Todos os direitos reservados.
-
-    </p>
+    </div>
 
   </footer>
 
-  <!-- ======================================================
-       JAVASCRIPT
-  ======================================================= -->
   <script src="assets/js/vagas.js"></script>
 
 </body>

@@ -1,9 +1,6 @@
 // =========================================================
-// MENU
+// MENU LATERAL
 // =========================================================
-const menuIcon =
-  document.querySelector(".menu-icon");
-
 const menuLateral =
   document.querySelector(".menu-lateral");
 
@@ -26,11 +23,6 @@ function fecharMenu(){
 }
 
 // =========================================================
-// EVENTO MENU
-// =========================================================
-menuIcon.addEventListener("click", abrirMenu);
-
-// =========================================================
 // SAIR
 // =========================================================
 function sairSistema(){
@@ -40,282 +32,648 @@ function sairSistema(){
 }
 
 // =========================================================
-// EMPRESAS E VAGAS
+// TODAS AS EMPRESAS E VAGAS
 // =========================================================
 const empresas = [
 
   // =======================================================
-  // MARCHESAN
+  // TECNOLOGIA
   // =======================================================
   {
-    nome: "Marchesan S.A.",
+    nome: "Nexora Systems",
+    setor: "💻 Tecnologia",
 
     vagas: [
 
       {
-        titulo: "Inspetor de Qualidade",
+        titulo: "Desenvolvedor(a) Full Stack Pleno",
 
-        local: "Matão - SP",
+        descricao:
+          "Experiência com React e Node.js.",
+
+        local:
+          "Anywhere Office • Brasil",
 
         requisitos: [
-          "Ensino Médio Completo",
+          "Mínimo de 3 anos de experiência",
+          "Domínio sólido de React",
+          "Node.js",
+          "Banco SQL e NoSQL"
+        ],
+
+        horario:
+          "Segunda a sexta • 09h às 18h",
+
+        regime:
+          "PJ • 100% Remoto",
+
+        contato:
+          "vagas@nexora.com.br"
+      },
+
+      {
+        titulo:
+          "Analista de Segurança da Informação",
+
+        descricao:
+          "Foco em testes de intrusão e adequação à LGPD.",
+
+        local:
+          "Campinas - SP",
+
+        requisitos: [
+          "Formação em TI",
+          "CompTIA Security+",
+          "CEH",
+          "LGPD",
+          "Testes de intrusão"
+        ],
+
+        horario:
+          "08h às 17h",
+
+        regime:
+          "CLT • Híbrido",
+
+        contato:
+          "vagas@nexora.com.br"
+      }
+
+    ]
+  },
+
+  // =======================================================
+  // METALÚRGICA
+  // =======================================================
+  {
+    nome: "FerroVale Metalúrgica",
+    setor: "⚙️ Metalúrgica e Indústria",
+
+    vagas: [
+
+      {
+        titulo:
+          "Operador(a) de Torno CNC",
+
+        descricao:
+          "Necessária experiência prévia na operação e preparação de máquinas.",
+
+        local:
+          "Joinville - SC",
+
+        requisitos: [
+          "Curso técnico em Mecânica",
           "Leitura de desenho técnico",
-          "Metrologia"
+          "2 anos de experiência"
         ],
 
-        horario: "08h às 18h",
+        horario:
+          "14h às 22h",
 
-        regime: "CLT",
+        regime:
+          "CLT • Presencial",
 
-        contato: "(16) 3221-6500"
-      },
-
-      {
-        titulo: "Soldador",
-
-        local: "Matão - SP",
-
-        requisitos: [
-          "Solda MIG/TIG",
-          "Experiência na área"
-        ],
-
-        horario: "07h às 17h",
-
-        regime: "CLT",
-
-        contato: "(16) 3221-6500"
-      },
-
-      {
-        titulo: "Operador de Máquinas",
-
-        local: "Matão - SP",
-
-        requisitos: [
-          "Experiência industrial",
-          "Noções de segurança"
-        ],
-
-        horario: "07h às 16h",
-
-        regime: "CLT",
-
-        contato: "(16) 3221-6500"
-      },
-
-      {
-        titulo: "Projetista Hidráulico",
-
-        local: "Matão - SP",
-
-        requisitos: [
-          "AutoCAD",
-          "Projetos hidráulicos"
-        ],
-
-        horario: "08h às 18h",
-
-        regime: "CLT",
-
-        contato: "(16) 3221-6500"
-      },
-
-      {
-        titulo: "Projetista de Produto",
-
-        local: "Matão - SP",
-
-        requisitos: [
-          "SolidWorks",
-          "Desenvolvimento de produto"
-        ],
-
-        horario: "08h às 18h",
-
-        regime: "CLT",
-
-        contato: "(16) 3221-6500"
+        contato:
+          "rh@ferrovale.ind.br"
       }
 
     ]
   },
 
   // =======================================================
-  // BALDAN
+  // AGRO
   // =======================================================
   {
-    nome: "Baldan Implementos",
+    nome: "AgroVerde Brasil",
+    setor: "🌱 Agro e Agronegócio",
 
     vagas: [
 
       {
-        titulo: "Auxiliar de Produção",
+        titulo:
+          "Engenheiro(a) Agrônomo(a)",
 
-        local: "Matão - SP",
+        descricao:
+          "Gestão de grandes lavouras e otimização de insumos.",
+
+        local:
+          "Ribeirão Preto - SP",
 
         requisitos: [
-          "Ensino Médio Completo",
-          "Disponibilidade de horário"
+          "CREA ativo",
+          "Experiência com soja e milho",
+          "CNH B",
+          "Disponibilidade para viagens"
         ],
 
-        horario: "07h às 17h",
+        horario:
+          "Horário comercial",
 
-        regime: "CLT",
+        regime:
+          "CLT • Campo",
 
-        contato: "(16) 3383-9999"
+        contato:
+          "talentos@agroverde.com.br"
       },
 
       {
-        titulo: "Torneiro Mecânico",
+        titulo:
+          "Técnico(a) Agrícola",
 
-        local: "Matão - SP",
+        descricao:
+          "Monitoramento de pragas e manutenção de relatórios.",
 
-        requisitos: [
-          "Curso de Torno",
-          "Experiência na função"
-        ],
-
-        horario: "08h às 18h",
-
-        regime: "CLT",
-
-        contato: "(16) 3383-9999"
-      }
-
-    ]
-  },
-
-  // =======================================================
-  // LBR
-  // =======================================================
-  {
-    nome: "LBR",
-
-    vagas: [
-
-      {
-        titulo: "Analista Administrativo",
-
-        local: "Matão - SP",
+        local:
+          "Ribeirão Preto - SP",
 
         requisitos: [
+          "Formação técnica",
           "Pacote Office",
-          "Boa comunicação"
+          "Monitoramento de pragas"
         ],
 
-        horario: "08h às 17h",
+        horario:
+          "07h às 16h",
 
-        regime: "CLT",
+        regime:
+          "CLT",
 
-        contato: "(16) 4002-8922"
+        contato:
+          "talentos@agroverde.com.br"
       },
 
       {
-        titulo: "Auxiliar de Limpeza",
+        titulo:
+          "Analista de Exportação Agro",
 
-        local: "Matão - SP",
+        descricao:
+          "Conhecimento em documentação aduaneira e inglês fluente.",
+
+        local:
+          "São Paulo - SP",
 
         requisitos: [
-          "Organização",
-          "Comprometimento"
+          "Comércio Exterior",
+          "Inglês fluente",
+          "Certificados fitossanitários"
         ],
 
-        horario: "06h às 15h",
+        horario:
+          "08h às 18h",
 
-        regime: "CLT",
+        regime:
+          "CLT • Híbrido",
 
-        contato: "(16) 4002-8922"
+        contato:
+          "comex@agroverde.com.br"
       }
 
     ]
   },
 
   // =======================================================
-  // CITROSUCO
+  // SAÚDE
   // =======================================================
   {
-    nome: "Citrosuco",
+    nome: "VitaCare Clínica",
+    setor: "🏥 Saúde",
 
     vagas: [
 
       {
-        titulo: "Técnico de Segurança",
+        titulo:
+          "Enfermeiro(a) Plantonista",
 
-        local: "Matão - SP",
+        descricao:
+          "Atuação em triagem e emergências.",
+
+        local:
+          "Curitiba - PR",
 
         requisitos: [
-          "Curso Técnico",
-          "Experiência na área"
+          "COREN ativo",
+          "BLS/ACLS",
+          "Experiência em triagem"
         ],
 
-        horario: "08h às 18h",
+        horario:
+          "12x36 • 19h às 07h",
 
-        regime: "CLT",
+        regime:
+          "CLT",
 
-        contato: "(16) 3382-5000"
+        contato:
+          "curriculos@vitacare.med.br"
       },
 
       {
-        titulo: "Motorista",
+        titulo:
+          "Recepcionista de Clínica",
 
-        local: "Matão - SP",
+        descricao:
+          "Atendimento ao público e agendamentos.",
+
+        local:
+          "Curitiba - PR",
+
+        requisitos: [
+          "Boa comunicação",
+          "Informática",
+          "Experiência em saúde"
+        ],
+
+        horario:
+          "08h às 17h",
+
+        regime:
+          "CLT",
+
+        contato:
+          "curriculos@vitacare.med.br"
+      }
+
+    ]
+  },
+
+  // =======================================================
+  // DESIGN
+  // =======================================================
+  {
+    nome: "PixelForge Studio",
+    setor: "🎨 Design e Marketing",
+
+    vagas: [
+
+      {
+        titulo:
+          "Diretor(a) de Arte",
+
+        descricao:
+          "Liderança criativa para campanhas digitais.",
+
+        local:
+          "Belo Horizonte - MG",
+
+        requisitos: [
+          "Portfólio robusto",
+          "Adobe",
+          "Experiência em agência"
+        ],
+
+        horario:
+          "10h às 19h",
+
+        regime:
+          "PJ • Remoto",
+
+        contato:
+          "jobs@pixelforge.studio"
+      }
+
+    ]
+  },
+
+  // =======================================================
+  // LOGÍSTICA
+  // =======================================================
+  {
+    nome: "FastRoute Logística",
+    setor: "📦 Logística e Transporte",
+
+    vagas: [
+
+      {
+        titulo:
+          "Motorista Carreteiro",
+
+        descricao:
+          "Viagens interestaduais e curso MOPP.",
+
+        local:
+          "Guarulhos - SP",
 
         requisitos: [
           "CNH E",
-          "Experiência com caminhão"
+          "EAR",
+          "MOPP atualizado"
         ],
 
-        horario: "Turnos",
+        horario:
+          "Variável",
 
-        regime: "CLT",
+        regime:
+          "CLT",
 
-        contato: "(16) 3382-5000"
+        contato:
+          "(11) 99999-0000"
+      },
+
+      {
+        titulo:
+          "Coordenador(a) de Frota",
+
+        descricao:
+          "Gestão de manutenção preventiva.",
+
+        local:
+          "Guarulhos - SP",
+
+        requisitos: [
+          "Logística",
+          "Excel avançado",
+          "Roteirização"
+        ],
+
+        horario:
+          "08h às 18h",
+
+        regime:
+          "CLT",
+
+        contato:
+          "rh@fastroute.com.br"
+      },
+
+      {
+        titulo:
+          "Auxiliar de Almoxarifado",
+
+        descricao:
+          "Conferência de notas e separação.",
+
+        local:
+          "Guarulhos - SP",
+
+        requisitos: [
+          "Ensino médio",
+          "Organização",
+          "Picking e Packing"
+        ],
+
+        horario:
+          "22h às 06h",
+
+        regime:
+          "CLT",
+
+        contato:
+          "rh@fastroute.com.br"
       }
 
     ]
   },
 
   // =======================================================
-  // LOUIS DREYFUS
+  // CONSTRUÇÃO
   // =======================================================
   {
-    nome: "Louis Dreyfus Company",
+    nome: "Constrular Engenharia",
+    setor: "🏗️ Construção Civil",
 
     vagas: [
 
       {
-        titulo: "Eletricista Industrial",
+        titulo:
+          "Mestre de Obras",
 
-        local: "Matão - SP",
+        descricao:
+          "Supervisão de equipes e cronograma.",
+
+        local:
+          "Goiânia - GO",
 
         requisitos: [
-          "NR10",
-          "Experiência industrial"
+          "5 anos de experiência",
+          "Projetos",
+          "Liderança"
         ],
 
-        horario: "08h às 18h",
+        horario:
+          "07h às 17h",
 
-        regime: "CLT",
+        regime:
+          "CLT",
 
-        contato: "(16) 3333-4444"
+        contato:
+          "rh@constrular.eng.br"
       },
 
       {
-        titulo: "Mecânico Industrial",
+        titulo:
+          "Engenheiro(a) Civil",
 
-        local: "Matão - SP",
+        descricao:
+          "Orçamentos e licitações.",
+
+        local:
+          "Goiânia - GO",
 
         requisitos: [
-          "Mecânica Industrial",
-          "Experiência na função"
+          "CREA ativo",
+          "SINAPI",
+          "Licitações"
         ],
 
-        horario: "07h às 17h",
+        horario:
+          "08h às 18h",
 
-        regime: "CLT",
+        regime:
+          "PJ • Híbrido",
 
-        contato: "(16) 3333-4444"
+        contato:
+          "rh@constrular.eng.br"
+      }
+
+    ]
+  },
+
+  // =======================================================
+  // EDUCAÇÃO
+  // =======================================================
+  {
+    nome: "EduNova Cursos",
+    setor: "🎓 Educação",
+
+    vagas: [
+
+      {
+        titulo:
+          "Designer Instrucional",
+
+        descricao:
+          "Criação de materiais EAD.",
+
+        local:
+          "Florianópolis - SC",
+
+        requisitos: [
+          "Metodologias ativas",
+          "Articulate",
+          "Experiência EAD"
+        ],
+
+        horario:
+          "09h às 18h",
+
+        regime:
+          "CLT • Remoto",
+
+        contato:
+          "vemser@edunova.edu.br"
+      }
+
+    ]
+  },
+
+  // =======================================================
+  // ALIMENTAÇÃO
+  // =======================================================
+  {
+    nome: "UrbanFood Express",
+    setor: "☕ Alimentação",
+
+    vagas: [
+
+      {
+        titulo:
+          "Chefe de Cozinha",
+
+        descricao:
+          "Criação de cardápios executivos.",
+
+        local:
+          "Rio de Janeiro - RJ",
+
+        requisitos: [
+          "Gastronomia",
+          "Gestão de equipe",
+          "Fichas técnicas"
+        ],
+
+        horario:
+          "15h às 23h20",
+
+        regime:
+          "CLT",
+
+        contato:
+          "curriculos@urbanfood.com.br"
+      },
+
+      {
+        titulo:
+          "Atendente de Salão",
+
+        descricao:
+          "Recepção e atendimento.",
+
+        local:
+          "Rio de Janeiro - RJ",
+
+        requisitos: [
+          "Boa comunicação",
+          "Agilidade",
+          "Experiência em restaurante"
+        ],
+
+        horario:
+          "16h às 00h20",
+
+        regime:
+          "CLT",
+
+        contato:
+          "curriculos@urbanfood.com.br"
+      },
+
+      {
+        titulo:
+          "Entregador(a) Motoboy",
+
+        descricao:
+          "Entregas na região central.",
+
+        local:
+          "Rio de Janeiro - RJ",
+
+        requisitos: [
+          "Moto própria",
+          "CNH A",
+          "MEI"
+        ],
+
+        horario:
+          "18h às 23h30",
+
+        regime:
+          "Prestador de serviço",
+
+        contato:
+          "(21) 98888-0000"
+      }
+
+    ]
+  },
+
+  // =======================================================
+  // ENERGIA
+  // =======================================================
+  {
+    nome: "EcoVolt Energia",
+    setor: "⚡ Energia e Sustentabilidade",
+
+    vagas: [
+
+      {
+        titulo:
+          "Técnico(a) Instalador Solar",
+
+        descricao:
+          "Instalação de sistemas fotovoltaicos.",
+
+        local:
+          "Fortaleza - CE",
+
+        requisitos: [
+          "NR10",
+          "NR35",
+          "Fotovoltaicos"
+        ],
+
+        horario:
+          "07h30 às 17h30",
+
+        regime:
+          "CLT",
+
+        contato:
+          "rh@ecovolt.com.br"
+      },
+
+      {
+        titulo:
+          "Consultor(a) de Vendas Técnicas",
+
+        descricao:
+          "Prospecção de clientes B2B.",
+
+        local:
+          "Fortaleza - CE",
+
+        requisitos: [
+          "Eficiência energética",
+          "Vendas B2B",
+          "Veículo próprio"
+        ],
+
+        horario:
+          "Horário comercial",
+
+        regime:
+          "PJ",
+
+        contato:
+          "rh@ecovolt.com.br"
       }
 
     ]
@@ -326,62 +684,78 @@ const empresas = [
 // =========================================================
 // MOSTRAR VAGAS
 // =========================================================
-function mostrarVagas(listaEmpresas = empresas){
+function mostrarVagas(lista = empresas){
 
   const container =
     document.querySelector(".vagas-container");
 
   container.innerHTML = "";
 
-  listaEmpresas.forEach((empresa, empresaIndex) => {
+  lista.forEach((empresa, empresaIndex) => {
 
     container.innerHTML += `
 
-      <div class="empresa-titulo">
+      <div class="empresa-bloco">
 
-        ${empresa.nome}
+        <div class="empresa-titulo">
+
+          <h2>
+            ${empresa.setor}
+          </h2>
+
+          <span>
+            ${empresa.nome}
+          </span>
+
+        </div>
+
+        <div class="vagas-grid">
+
+          ${empresa.vagas.map((vaga, vagaIndex) => `
+
+            <div class="vaga-card">
+
+              <h3>
+
+                ${vaga.titulo}
+
+              </h3>
+
+              <span class="empresa">
+
+                ${empresa.nome}
+
+              </span>
+
+              <p>
+
+                ${vaga.descricao}
+
+              </p>
+
+              <p>
+
+                📍 ${vaga.local}
+
+              </p>
+
+              <button
+                onclick="abrirDetalhes(${empresaIndex}, ${vagaIndex})"
+              >
+
+                Ver Detalhes
+
+              </button>
+
+            </div>
+
+          `).join("")}
+
+        </div>
 
       </div>
 
     `;
-
-    empresa.vagas.forEach((vaga, vagaIndex) => {
-
-      container.innerHTML += `
-
-        <div class="vaga-card">
-
-          <h2>
-
-            ${vaga.titulo}
-
-          </h2>
-
-          <span class="empresa">
-
-            ${empresa.nome}
-
-          </span>
-
-          <p>
-
-            📍 ${vaga.local}
-
-          </p>
-
-          <button
-            onclick="abrirDetalhes(${empresaIndex}, ${vagaIndex})"
-          >
-
-            Ver Detalhes
-
-          </button>
-
-        </div>
-
-      `;
-
-    });
 
   });
 
@@ -430,48 +804,45 @@ function abrirDetalhes(empresaIndex, vagaIndex){
 
         </h1>
 
-        <span>
+        <span class="empresa-detalhe">
 
           ${empresa.nome}
 
         </span>
 
-        <p>
-
-          📍 ${vaga.local}
-
-        </p>
-
         <div class="detalhes-box">
 
-          <h3>Requisitos</h3>
+          <p>
+            📍 <strong>Local:</strong>
+            ${vaga.local}
+          </p>
+
+          <p>
+            ⏰ <strong>Horário:</strong>
+            ${vaga.horario}
+          </p>
+
+          <p>
+            💼 <strong>Regime:</strong>
+            ${vaga.regime}
+          </p>
+
+          <p>
+            📧 <strong>Contato:</strong>
+            ${vaga.contato}
+          </p>
+
+          <h3>
+
+            Requisitos
+
+          </h3>
 
           <ul>
 
             ${requisitosHTML}
 
           </ul>
-
-          <p>
-
-            <strong>Horário:</strong>
-            ${vaga.horario}
-
-          </p>
-
-          <p>
-
-            <strong>Regime:</strong>
-            ${vaga.regime}
-
-          </p>
-
-          <p>
-
-            <strong>Contato:</strong>
-            ${vaga.contato}
-
-          </p>
 
         </div>
 
@@ -511,6 +882,12 @@ function pesquisarVagas(){
             .toLowerCase()
             .includes(texto)
 
+          ||
+
+          empresa.setor
+            .toLowerCase()
+            .includes(texto)
+
         );
 
       });
@@ -520,6 +897,8 @@ function pesquisarVagas(){
       empresasFiltradas.push({
 
         nome: empresa.nome,
+
+        setor: empresa.setor,
 
         vagas: vagasFiltradas
 
