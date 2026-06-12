@@ -77,6 +77,15 @@ function pesquisarEmpresas(){
 }
 
 // =========================================================
+// IR PARA SETOR
+// =========================================================
+function irParaSetor(setor){
+
+  window.location.href =
+    `vagas.html?setor=${encodeURIComponent(setor)}`;
+
+}
+// =========================================================
 // BOTÕES DAS EMPRESAS
 // =========================================================
 const botoes =

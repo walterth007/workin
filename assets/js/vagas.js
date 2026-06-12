@@ -913,6 +913,30 @@ function pesquisarVagas(){
 }
 
 // =========================================================
-// INICIAR
+// PEGAR SETOR DA URL
 // =========================================================
-mostrarVagas();
+const parametros =
+  new URLSearchParams(window.location.search);
+
+const setorURL =
+  parametros.get("setor");
+
+// =========================================================
+// INICIAR COM FILTRO
+// =========================================================
+if(setorURL){
+
+  const empresasFiltradas =
+    empresas.filter(empresa =>
+
+      empresa.setor === setorURL
+
+    );
+
+  mostrarVagas(empresasFiltradas);
+
+}else{
+
+  mostrarVagas();
+
+}

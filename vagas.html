@@ -56,7 +56,7 @@
       </a>
 
     </div>
-
+    <!-- PESQUISA  -->
     <div class="search-box">
 
       <input
@@ -74,29 +74,34 @@
 
     </div>
 
+    <!-- MENU -->
     <div
       class="menu-area"
       onclick="abrirMenu()"
     >
 
-      <span class="menu-texto">
+      <h1 class="menu-texto">
         Menu
-      </span>
+      </h1>
 
-      <i class="fa-solid fa-bars"></i>
+      <div class="menu-icon">
+        <img src="assets/icons/Menu-Header.svg" alt="Menu">
+      </div>
 
     </div>
 
   </nav>
 
-  <!-- MENU -->
+ <!-- ======================================================
+       MENU LATERAL
+  ======================================================= -->
   <div class="menu-lateral hidden">
 
     <div class="menu-topo">
 
       <h2>Menu</h2>
 
-      <button
+      <button 
         class="fechar-menu"
         onclick="fecharMenu()"
       >
@@ -110,25 +115,28 @@
     <ul>
 
       <li onclick="window.location.href='index.html'">
-        🏠 Início
+        <i class="fa-solid fa-house"></i>
+        Início
       </li>
 
       <li onclick="window.location.href='vagas.html'">
-        💼 Vagas
+        <i class="fa-solid fa-briefcase"></i>
+        Vagas
       </li>
 
       <li onclick="window.location.href='sobre.html'">
-        📘 Sobre
+        <i class="fa-solid fa-book"></i>
+        Sobre
       </li>
 
       <li onclick="window.location.href='login.html'">
-        👤 Perfil
+        <i class="fa-solid fa-user"></i>
+        Perfil
       </li>
 
     </ul>
 
   </div>
-
   <!-- HERO -->
   <section class="hero-vagas">
 
@@ -162,16 +170,114 @@
 
   </section>
 
-  <!-- FOOTER -->
-  <footer class="footer">
+<!-- ======================================================
+     FOOTER
+======================================================= -->
+<footer class="footer">
 
-    <div class="footer-copy">
+  <div class="footer-container">
 
-      © 2026 WorkIN • Todos os direitos reservados
+    <!-- LOGO -->
+    <div class="footer-logo">
+
+      <div class="footer-brand">
+
+        <img 
+          src="assets/img/Logo-WorkIN-Aba-Final.svg"
+          alt="WorkIN"
+        >
+
+        <h2>
+
+          Work<span>IN</span>
+
+        </h2>
+
+      </div>
+
+      <p>
+
+        Conectando talentos às melhores
+        oportunidades todos os dias.
+
+      </p>
 
     </div>
 
-  </footer>
+    <!-- NAVEGAÇÃO -->
+    <div class="footer-links">
+
+      <h3>Navegação</h3>
+
+      <a href="index.html">Início</a>
+
+      <a href="vagas.html">Vagas</a>
+
+      <a href="#">Empresas</a>
+
+      <a href="sobre.html">Sobre nós</a>
+
+    </div>
+
+    <!-- EMPRESAS -->
+    <div class="footer-links">
+
+      <h3>Para empresas</h3>
+
+      <a href="#">Publicar vagas</a>
+
+      <a href="#">Planos</a>
+
+      <a href="#">Soluções</a>
+
+      <a href="#">Contato</a>
+
+    </div>
+
+    <!-- SUPORTE -->
+    <div class="footer-links">
+
+      <h3>Suporte</h3>
+
+      <a href="#">Central de ajuda</a>
+
+      <a href="#">Dicas de carreira</a>
+
+      <a href="#">Termos de uso</a>
+
+      <a href="#">Privacidade</a>
+
+    </div>
+
+    <!-- REDES -->
+    <div class="footer-redes">
+
+      <h3>Redes sociais</h3>
+
+      <div class="redes-icons">
+
+        <i class="fa-brands fa-linkedin"></i>
+
+        <i class="fa-brands fa-instagram"></i>
+
+        <i class="fa-brands fa-facebook"></i>
+
+        <i class="fa-brands fa-github"></i>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- COPYRIGHT -->
+  <div class="footer-copy">
+
+    © 2026 WorkIN. Todos os direitos reservados.
+
+  </div>
+
+</footer>
 
   <script src="assets/js/vagas.js"></script>
 

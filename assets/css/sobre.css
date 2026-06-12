@@ -33,115 +33,15 @@ img{
 
   width: 100%;
 
-  height: 100px;
+  background: #0B409C;
 
-  background: #3035A1;
+  padding: 18px 40px;
 
   display: flex;
 
   align-items: center;
 
   justify-content: space-between;
-
-  padding: 0 45px;
-
-  position: sticky;
-
-  top: 0;
-
-  z-index: 100;
-}
-
-/* =========================================================
-   LOGO
-========================================================= */
-.logo a{
-
-  display: flex;
-
-  align-items: center;
-}
-
-.logo img{
-
-  width: 75px;
-
-  transition: 0.2s ease;
-}
-
-.logo img:hover{
-
-  transform: scale(1.06);
-}
-
-/* =========================================================
-   PESQUISA
-========================================================= */
-.search-box{
-
-  width: 420px;
-
-  height: 58px;
-
-  background: rgba(255,255,255,0.12);
-
-  border: 1px solid rgba(255,255,255,0.2);
-
-  border-radius: 60px;
-
-  display: flex;
-
-  align-items: center;
-
-  padding: 0 8px;
-}
-
-.search-box input{
-
-  width: 100%;
-
-  height: 100%;
-
-  border: none;
-
-  outline: none;
-
-  background: transparent;
-
-  padding-left: 20px;
-
-  color: white;
-
-  font-size: 17px;
-}
-
-.search-box input::placeholder{
-
-  color: rgba(255,255,255,0.75);
-}
-
-.lupa-pesquisa{
-
-  width: 55px;
-
-  height: 45px;
-
-  border: none;
-
-  border-radius: 40px;
-
-  background: #FCC61D;
-
-  color: white;
-
-  cursor: pointer;
-
-  transition: 0.2s ease;
-}
-
-.lupa-pesquisa:hover{
-
-  transform: scale(1.05);
 }
 
 /* =========================================================
@@ -155,7 +55,7 @@ img{
 
   border-radius: 50px;
 
-  border: 4px solid rgba(255,255,255,0.2);
+  border: 2.5px solid white;
 
   display: flex;
 
@@ -196,9 +96,26 @@ img{
 
 .menu-icon img{
 
-  width: 24px;
+  width: 20px;
+}
 
-  height: 24px;
+/* =========================================================
+   LOGO
+========================================================= */
+.logo img{
+
+  width: 75px;
+
+  transition: 0.3s ease;
+
+  border: 2.5px solid white;
+
+  border-radius: 50px;
+}
+
+.logo img:hover{
+
+  transform: scale(1.06);
 }
 
 /* =========================================================
@@ -223,6 +140,17 @@ img{
   z-index: 999;
 
   box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+}
+
+.menu-lateral li {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+
+  padding: 10px;
+  
 }
 
 .menu-topo{
@@ -280,10 +208,11 @@ img{
 
 .menu-lateral li:hover{
 
-  transform: translateX(-8px);
+  transform: translateY(-6px);
 
   color: #FFE867;
 }
+
 
 /* =========================================================
    ANIMAÇÃO MENU
@@ -647,22 +576,35 @@ img{
 ========================================================= */
 .footer{
 
-  background: #181d73;
+  width: 100%;
 
-  color: white;
+  background: white;
 
-  padding-top: 70px;
+  margin-top: 120px;
+
+  border-top: 2px solid #E5E5E5;
 }
 
+/* CONTAINER */
 .footer-container{
 
-  display: grid;
+  width: 100%;
 
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+
+  justify-content: space-between;
+
+  flex-wrap: wrap;
 
   gap: 40px;
 
-  padding: 0 80px 50px;
+  padding: 60px 70px;
+}
+
+/* LOGO */
+.footer-logo{
+
+  max-width: 260px;
 }
 
 .footer-brand{
@@ -671,54 +613,82 @@ img{
 
   align-items: center;
 
-  gap: 15px;
+  gap: 10px;
 
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .footer-brand img{
 
-  width: 70px;
+  width: 50px;
 }
 
 .footer-brand h2{
 
-  font-size: 34px;
+  color: #0B409C;
+
+  font-size: 32px;
 
   font-family: 'Montserrat', sans-serif;
 }
 
-.footer-logo p{
+.footer-brand span{
 
-  color: rgba(255,255,255,0.8);
-
-  line-height: 1.7;
+  color: #FCC717;
 }
 
-.footer-links h3,
-.footer-redes h3{
+.footer-logo p{
 
-  margin-bottom: 22px;
+  color: #666;
 
-  font-size: 22px;
+  line-height: 1.6;
+
+  font-size: 17px;
+}
+
+/* LINKS */
+.footer-links{
+
+  display: flex;
+
+  flex-direction: column;
+}
+
+.footer-links h3{
+
+  color: #10316B;
+
+  margin-bottom: 18px;
+
+  font-size: 20px;
 }
 
 .footer-links a{
 
-  display: block;
-
   text-decoration: none;
 
-  color: rgba(255,255,255,0.8);
+  color: #666;
 
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 
   transition: 0.2s ease;
 }
 
 .footer-links a:hover{
 
-  color: #FCC61D;
+  color: #0B409C;
+
+  transform: translateX(4px);
+}
+
+/* REDES */
+.footer-redes h3{
+
+  color: #10316B;
+
+  margin-bottom: 18px;
+
+  font-size: 20px;
 }
 
 .redes-icons{
@@ -726,11 +696,27 @@ img{
   display: flex;
 
   gap: 16px;
-
-  font-size: 24px;
 }
 
 .redes-icons i{
+
+  width: 42px;
+
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: #F2F7FF;
+
+  color: #0B409C;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 18px;
 
   cursor: pointer;
 
@@ -739,33 +725,45 @@ img{
 
 .redes-icons i:hover{
 
-  color: #FCC61D;
+  background: #0B409C;
 
-  transform: translateY(-3px);
+  color: white;
+
+  transform: translateY(-4px);
 }
 
-/* =========================================================
-   COPYRIGHT
-========================================================= */
+/* COPYRIGHT */
 .footer-copy{
 
-  border-top: 1px solid rgba(255,255,255,0.1);
+  width: 100%;
 
   text-align: center;
 
-  padding: 25px;
+  padding: 22px;
 
-  color: rgba(255,255,255,0.7);
+  border-top: 1px solid #E5E5E5;
+
+  color: #666;
+
+  font-size: 16px;
 }
 
+/* RESPONSIVO */
+@media(max-width: 900px){
+
+  .footer-container{
+
+    flex-direction: column;
+  }
+
+}
 /* =========================================================
-   ESCONDER
+   ESCONDER MENU LATERAL
 ========================================================= */
 .hidden{
 
-  display: none;
+  display: none !important;
 }
-
 /* =========================================================
    RESPONSIVO
 ========================================================= */
@@ -799,7 +797,7 @@ img{
   }
 }
 
-@media(max-width: 600px){
+@media(max-width: 400px){
 
   .navbar{
 

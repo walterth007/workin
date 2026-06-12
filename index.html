@@ -71,22 +71,6 @@
 
     </div>
 
-    <!-- PESQUISA -->
-    <div class="search-box">
-
-      <input 
-        type="text" 
-        placeholder="Encontre sua vaga..."
-      >
-
-      <button class="lupa-pesquisa">
-
-        <i class="fa-solid fa-magnifying-glass"></i>
-
-      </button>
-
-    </div>
-
 <!-- MENU -->
 <div 
   class="menu-area"
@@ -102,7 +86,7 @@
   <div class="menu-icon">
 
     <img 
-      src="assets/icons/menu-ham.svg" 
+      src="assets/icons/Menu-Header.svg" 
       alt="Menu"
     >
 
@@ -131,22 +115,26 @@
 
     </div>
 
-    <ul>
+        <ul>
 
       <li onclick="window.location.href='index.html'">
-        🏠 Início
+        <i class="fa-solid fa-house"></i>
+        Início
       </li>
 
       <li onclick="window.location.href='vagas.html'">
-        💼 Vagas
+        <i class="fa-solid fa-briefcase"></i>
+        Vagas
       </li>
 
       <li onclick="window.location.href='sobre.html'">
-        📘 Sobre
+        <i class="fa-solid fa-book"></i>
+        Sobre
       </li>
 
       <li onclick="window.location.href='login.html'">
-        👤 Perfil
+        <i class="fa-solid fa-user"></i>
+        Perfil
       </li>
 
     </ul>
@@ -205,43 +193,54 @@
 
     <div class="setores-grid">
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('💻 Tecnologia')"
+      >
         💻 Tecnologia
       </div>
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('⚙️ Metalúrgica e Indústria')">
         ⚙️ Indústria
       </div>
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('🌱 Agro e Agronegócio')">
         🌱 Agronegócio
       </div>
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('🏥 Saúde')">
         🏥 Saúde
       </div>
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('🎨 Design e Marketing')">
         🎨 Design
       </div>
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('📦 Logística e Transporte')">
         📦 Logística
       </div>
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('🏗️ Construção Civil')">
         🏗️ Construção
       </div>
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('🎓 Educação')">
         🎓 Educação
       </div>
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('☕ Alimentação')">
         ☕ Alimentação
       </div>
 
-      <div class="setor-card">
+      <div class="setor-card"
+      onclick="irParaSetor('⚡ Energia e Sustentabilidade')">
         ⚡ Energia
       </div>
 
@@ -702,7 +701,7 @@
 
         <h2>
 
-          WorkIN
+          Work<span>IN</span>
 
         </h2>
 

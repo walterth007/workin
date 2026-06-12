@@ -56,7 +56,7 @@ img{
 
   border-radius: 50px;
 
-  border: 4px solid rgba(255,255,255,0.2);
+  border: 2.5px solid white;
 
   display: flex;
 
@@ -97,9 +97,7 @@ img{
 
 .menu-icon img{
 
-  width: 24px;
-
-  height: 24px;
+  width: 20px;
 }
 
 /* =========================================================
@@ -110,95 +108,15 @@ img{
   width: 75px;
 
   transition: 0.3s ease;
+
+  border: 2.5px solid white;
+
+  border-radius: 50px;
 }
 
 .logo img:hover{
 
   transform: scale(1.06);
-}
-
-/* =========================================================
-   PESQUISA
-========================================================= */
-.search-box{
-
-  background: rgba(255,255,255,0.12);
-
-  border: 1px solid rgba(255,255,255,0.15);
-
-  border-radius: 50px;
-
-  display: flex;
-
-  align-items: center;
-
-  padding: 6px;
-
-  gap: 10px;
-}
-
-.search-box input{
-
-  width: 340px;
-
-  border: none;
-
-  outline: none;
-
-  background: transparent;
-
-  color: white;
-
-  padding-left: 18px;
-
-  font-size: 18px;
-}
-
-.search-box input::placeholder{
-
-  color: rgba(255,255,255,0.75);
-}
-
-.lupa-pesquisa{
-
-  width: 65px;
-
-  height: 45px;
-
-  border: none;
-
-  border-radius: 50px;
-
-  background: #FFE867;
-
-  color: #10316B;
-
-  cursor: pointer;
-
-  transition: 0.2s ease;
-}
-
-.lupa-pesquisa:hover{
-
-  transform: scale(1.05);
-}
-
-.lupa-pesquisa i{
-
-  font-size: 18px;
-}
-
-/* =========================================================
-   MENU
-========================================================= */
-.menu-icon{
-
-  cursor: pointer;
-}
-
-.menu-icon img{
-
-  width: 34px;
 }
 
 /* =========================================================
@@ -223,6 +141,17 @@ img{
   z-index: 999;
 
   box-shadow: -5px 0 15px rgba(0,0,0,0.2);
+}
+
+.menu-lateral li {
+  display: flex;
+
+  gap: 15px;
+
+  align-items: center;
+
+  padding: 10px;
+
 }
 
 .menu-topo{
@@ -256,6 +185,15 @@ img{
   font-size: 32px;
 
   cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.fechar-menu:hover{
+
+  transform: rotate(90deg);
+
+  color: #FCC61D;
 }
 
 .menu-lateral ul{
@@ -280,7 +218,7 @@ img{
 
 .menu-lateral li:hover{
 
-  transform: translateX(-8px);
+  transform: translateY(-6px);
 
   color: #FFE867;
 }
@@ -298,11 +236,13 @@ img{
 
   display: flex;
 
-  align-items: center;
+  align-items: stretch;
 
   justify-content: space-between;
 
   gap: 50px;
+
+  flex-wrap: wrap;
 }
 
 /* =========================================================
@@ -310,10 +250,21 @@ img{
 ========================================================= */
 .hero-texto{
 
-  width: 65%;
+  flex: 1;
+
+  min-width: 350px;
+
   background: #ffffff;
+
   padding: 40px;
-  border-radius: 20px;
+
+  border-radius: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
 }
 
 .hero-texto h1{
@@ -359,6 +310,8 @@ img{
   cursor: pointer;
 
   transition: 0.2s ease;
+
+  width: fit-content;
 }
 
 .hero-texto button:hover{
@@ -373,11 +326,42 @@ img{
 ========================================================= */
 .hero-img{
 
-  width: 50%;
+  flex: 1;
+
+  min-width: 350px;
 }
 
 .hero-img img{
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
   border-radius: 20px;
+
+  display: block;
+}
+/* =========================================================
+   IMAGEM HERO
+========================================================= */
+.hero-img img{
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  display: block;
+
+}
+
+.hero-img img{
+  border-radius: 30px;
   width: 100%;
 }
 
@@ -417,6 +401,8 @@ section h2{
 }
 
 .setor-card{
+
+  cursor: pointer;
 
   background: white;
 
@@ -688,6 +674,15 @@ section h2{
   font-size: 17px;
 
   font-weight: 700;
+
+  transition: 0.3s ease;
+}
+
+.vaga-card button:hover{
+
+  background: #0c3170;
+
+  transform: scale(1.05);
 }
 
 /* =========================================================
@@ -749,6 +744,11 @@ section h2{
   font-size: 32px;
 
   font-family: 'Montserrat', sans-serif;
+}
+
+.footer-brand span{
+
+  color: #FCC717;
 }
 
 .footer-logo p{
@@ -872,7 +872,7 @@ section h2{
 
 }
 /* =========================================================
-   ESCONDER
+   ESCONDER MENU LATERAL
 ========================================================= */
 .hidden{
 
