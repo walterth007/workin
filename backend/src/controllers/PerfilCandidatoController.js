@@ -17,16 +17,10 @@ class PerfilCandidatoController {
                 });
             }
 
-            if (req.usuario.tipo !== "candidato") {
-                return res.status(403).json({
-                    mensagem: "Apenas candidatos podem criar um perfil."
-                });
-            }
-
-            const perfil = await this.perfilCandidatoService.criarPerfil({
-                ...req.body,
-                usuarioId: req.usuario.id
-            });
+            const perfil = await this.perfilCandidatoService.criarPerfil(
+                req.usuario,
+                req.body
+            );
 
             return res.status(201).json({
                 mensagem: "Perfil criado com sucesso.",
@@ -49,14 +43,8 @@ class PerfilCandidatoController {
             }
 
             const perfil = await this.perfilCandidatoService.buscarMeuPerfil(
-                req.usuario.id
+                req.usuario
             );
-
-            if (!perfil) {
-                return res.status(404).json({
-                    mensagem: "Perfil não encontrado."
-                });
-            }
 
             return res.status(200).json(perfil);
 
@@ -75,10 +63,11 @@ class PerfilCandidatoController {
                 });
             }
 
-            const perfil = await this.perfilCandidatoService.atualizarMeuPerfil(
-                req.usuario.id,
-                req.body
-            );
+            const perfil =
+                await this.perfilCandidatoService.atualizarMeuPerfil(
+                    req.usuario,
+                    req.body
+                );
 
             return res.status(200).json({
                 mensagem: "Perfil atualizado com sucesso.",
@@ -101,7 +90,7 @@ class PerfilCandidatoController {
             }
 
             await this.perfilCandidatoService.excluirMeuPerfil(
-                req.usuario.id
+                req.usuario
             );
 
             return res.status(200).json({

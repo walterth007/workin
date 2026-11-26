@@ -1,7 +1,8 @@
 
 class VagaController {
-    constructor(vagaService) {
+    constructor(vagaService, empresaRepository) {
         this.vagaService = vagaService;
+        this.empresaRepository = empresaRepository;
 
         this.criar = this.criar.bind(this);
         this.buscarPorId = this.buscarPorId.bind(this);
@@ -14,17 +15,40 @@ class VagaController {
         this.excluir = this.excluir.bind(this);
     }
 
+    async obterEmpresaAutenticada(req) {
+        if (!req.usuario) {
+            throw new Error("Usuário não autenticado.");
+        }
+
+        if (req.usuario.tipo !== "empresa") {
+            throw new Error("Apenas empresas podem realizar esta ação.");
+        }
+
+        const empresa = await this.empresaRepository.buscarPorUsuarioId(
+            req.usuario.id
+        );
+
+        if (!empresa) {
+            throw new Error("Empresa não encontrada.");
+        }
+
+        return empresa;
+    }
+
     async criar(req, res) {
         try {
+            const empresa = await this.obterEmpresaAutenticada(req);
+
             const vaga = await this.vagaService.criarVaga({
                 ...req.body,
-                empresaId: req.usuario.empresaId
+                empresaId: empresa.id
             });
 
             return res.status(201).json({
                 mensagem: "Vaga criada com sucesso.",
                 vaga
             });
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -38,15 +62,10 @@ class VagaController {
                 Number(req.params.id)
             );
 
-            if (!vaga) {
-                return res.status(404).json({
-                    mensagem: "Vaga não encontrada."
-                });
-            }
-
             return res.status(200).json(vaga);
+
         } catch (erro) {
-            return res.status(400).json({
+            return res.status(404).json({
                 mensagem: erro.message
             });
         }
@@ -57,6 +76,7 @@ class VagaController {
             const vagas = await this.vagaService.listarVagasAbertas();
 
             return res.status(200).json(vagas);
+
         } catch (erro) {
             return res.status(500).json({
                 mensagem: "Erro ao listar vagas."
@@ -66,11 +86,14 @@ class VagaController {
 
     async listarPorEmpresa(req, res) {
         try {
+            const empresa = await this.obterEmpresaAutenticada(req);
+
             const vagas = await this.vagaService.listarVagasPorEmpresa(
-                req.usuario.empresaId
+                empresa.id
             );
 
             return res.status(200).json(vagas);
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -80,15 +103,18 @@ class VagaController {
 
     async publicar(req, res) {
         try {
+            const empresa = await this.obterEmpresaAutenticada(req);
+
             const vaga = await this.vagaService.publicarVaga(
                 Number(req.params.id),
-                req.usuario.empresaId
+                empresa.id
             );
 
             return res.status(200).json({
                 mensagem: "Vaga publicada com sucesso.",
                 vaga
             });
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -98,9 +124,11 @@ class VagaController {
 
     async atualizar(req, res) {
         try {
+            const empresa = await this.obterEmpresaAutenticada(req);
+
             const vaga = await this.vagaService.atualizarVaga(
                 Number(req.params.id),
-                req.usuario.empresaId,
+                empresa.id,
                 req.body
             );
 
@@ -108,6 +136,7 @@ class VagaController {
                 mensagem: "Vaga atualizada com sucesso.",
                 vaga
             });
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -117,15 +146,18 @@ class VagaController {
 
     async pausar(req, res) {
         try {
+            const empresa = await this.obterEmpresaAutenticada(req);
+
             const vaga = await this.vagaService.pausarVaga(
                 Number(req.params.id),
-                req.usuario.empresaId
+                empresa.id
             );
 
             return res.status(200).json({
                 mensagem: "Vaga pausada com sucesso.",
                 vaga
             });
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -135,15 +167,18 @@ class VagaController {
 
     async encerrar(req, res) {
         try {
+            const empresa = await this.obterEmpresaAutenticada(req);
+
             const vaga = await this.vagaService.encerrarVaga(
                 Number(req.params.id),
-                req.usuario.empresaId
+                empresa.id
             );
 
             return res.status(200).json({
                 mensagem: "Vaga encerrada com sucesso.",
                 vaga
             });
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -153,14 +188,17 @@ class VagaController {
 
     async excluir(req, res) {
         try {
+            const empresa = await this.obterEmpresaAutenticada(req);
+
             await this.vagaService.excluirVaga(
                 Number(req.params.id),
-                req.usuario.empresaId
+                empresa.id
             );
 
             return res.status(200).json({
                 mensagem: "Vaga excluída com sucesso."
             });
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message

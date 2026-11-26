@@ -10,6 +10,16 @@ class EmpresaController {
         this.rejeitar = this.rejeitar.bind(this);
     }
 
+    validarId(id) {
+        const empresaId = Number(id);
+
+        if (!Number.isInteger(empresaId) || empresaId <= 0) {
+            throw new Error("ID da empresa inválido.");
+        }
+
+        return empresaId;
+    }
+
     async criar(req, res) {
         try {
             if (!req.usuario) {
@@ -37,20 +47,18 @@ class EmpresaController {
 
     async buscarPorId(req, res) {
         try {
-            const empresa = await this.empresaService.buscarEmpresaPorId(
-                Number(req.params.id)
-            );
+            const id = this.validarId(req.params.id);
 
-            if (!empresa) {
-                return res.status(404).json({
-                    mensagem: "Empresa não encontrada."
-                });
-            }
+            const empresa = await this.empresaService.buscarEmpresaPorId(id);
 
             return res.status(200).json(empresa);
 
         } catch (erro) {
-            return res.status(400).json({
+            const status = erro.message === "Empresa não encontrada."
+                ? 404
+                : 400;
+
+            return res.status(status).json({
                 mensagem: erro.message
             });
         }
@@ -70,7 +78,8 @@ class EmpresaController {
                 });
             }
 
-            const empresas = await this.empresaService.listarEmpresasPendentes();
+            const empresas =
+                await this.empresaService.listarEmpresasPendentes();
 
             return res.status(200).json(empresas);
 
@@ -89,8 +98,10 @@ class EmpresaController {
                 });
             }
 
+            const id = this.validarId(req.params.id);
+
             const empresa = await this.empresaService.aprovarEmpresa(
-                Number(req.params.id),
+                id,
                 req.usuario
             );
 
@@ -114,8 +125,10 @@ class EmpresaController {
                 });
             }
 
+            const id = this.validarId(req.params.id);
+
             const empresa = await this.empresaService.rejeitarEmpresa(
-                Number(req.params.id),
+                id,
                 req.usuario
             );
 

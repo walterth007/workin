@@ -10,8 +10,32 @@ class CandidaturaController {
         this.cancelar = this.cancelar.bind(this);
     }
 
+    verificarAutenticacao(req, res) {
+        if (!req.usuario) {
+            res.status(401).json({
+                mensagem: "Usuário não autenticado."
+            });
+
+            return false;
+        }
+
+        return true;
+    }
+
+    validarId(id, mensagem) {
+        const numero = Number(id);
+
+        if (!Number.isInteger(numero) || numero <= 0) {
+            throw new Error(mensagem);
+        }
+
+        return numero;
+    }
+
     async criar(req, res) {
         try {
+            if (!this.verificarAutenticacao(req, res)) return;
+
             const candidatura =
                 await this.candidaturaService.criarCandidatura(
                     req.usuario,
@@ -22,6 +46,7 @@ class CandidaturaController {
                 mensagem: "Candidatura realizada com sucesso.",
                 candidatura
             });
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -31,12 +56,15 @@ class CandidaturaController {
 
     async listarMinhas(req, res) {
         try {
+            if (!this.verificarAutenticacao(req, res)) return;
+
             const candidaturas =
                 await this.candidaturaService.listarMinhasCandidaturas(
                     req.usuario
                 );
 
             return res.status(200).json(candidaturas);
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -46,13 +74,21 @@ class CandidaturaController {
 
     async listarDaVaga(req, res) {
         try {
+            if (!this.verificarAutenticacao(req, res)) return;
+
+            const vagaId = this.validarId(
+                req.params.vagaId,
+                "ID da vaga inválido."
+            );
+
             const candidaturas =
                 await this.candidaturaService.listarCandidaturasDaVaga(
                     req.usuario,
-                    Number(req.params.vagaId)
+                    vagaId
                 );
 
             return res.status(200).json(candidaturas);
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -62,12 +98,25 @@ class CandidaturaController {
 
     async atualizarStatus(req, res) {
         try {
+            if (!this.verificarAutenticacao(req, res)) return;
+
+            const candidaturaId = this.validarId(
+                req.params.id,
+                "ID da candidatura inválido."
+            );
+
             const { status } = req.body;
+
+            if (!status) {
+                return res.status(400).json({
+                    mensagem: "Informe o novo status da candidatura."
+                });
+            }
 
             const candidatura =
                 await this.candidaturaService.atualizarStatus(
                     req.usuario,
-                    Number(req.params.id),
+                    candidaturaId,
                     status
                 );
 
@@ -75,6 +124,7 @@ class CandidaturaController {
                 mensagem: "Status da candidatura atualizado.",
                 candidatura
             });
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
@@ -84,16 +134,24 @@ class CandidaturaController {
 
     async cancelar(req, res) {
         try {
+            if (!this.verificarAutenticacao(req, res)) return;
+
+            const candidaturaId = this.validarId(
+                req.params.id,
+                "ID da candidatura inválido."
+            );
+
             const candidatura =
                 await this.candidaturaService.cancelarCandidatura(
                     req.usuario,
-                    Number(req.params.id)
+                    candidaturaId
                 );
 
             return res.status(200).json({
                 mensagem: "Candidatura cancelada com sucesso.",
                 candidatura
             });
+
         } catch (erro) {
             return res.status(400).json({
                 mensagem: erro.message
