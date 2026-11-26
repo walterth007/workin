@@ -1,0 +1,29 @@
+
+### Testar a API
+GET http://localhost:3000/
+
+### Listar vagas
+GET http://localhost:3000/api/vagas
+
+### Cadastrar usuário
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Teste WorkIN",
+  "email": "teste@workin.com",
+  "senhaHash": "hash-temporario-apenas-para-teste",
+  "tipo": "candidato"
+}
+
+
+### Tentar cadastrar administrador
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+  "nome": "Administrador Teste",
+  "email": "admin-teste@workin.com",
+  "senhaHash": "hash-temporario-apenas-para-teste",
+  "tipo": "administrador"
+}
